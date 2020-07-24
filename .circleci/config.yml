@@ -6,6 +6,7 @@ jobs:
       - image: circleci/ruby:2.6.6
     steps:
       - checkout
+      - run: gem install bundler:2.1.4
       - run: bundle install
       - run:
           name: Setup Code Climate test-reporter
