@@ -3,6 +3,7 @@ PATH
   specs:
     rapils (0.1.0)
       diffcrypt (~> 0.3)
+      pundit (~> 2.1)
       rails (~> 6.0.3, >= 6.0.3.1)
 
 GEM
@@ -95,6 +96,8 @@ GEM
     parallel (1.19.2)
     parser (2.7.1.4)
       ast (~> 2.4.1)
+    pundit (2.1.0)
+      activesupport (>= 3.0.0)
     rack (2.2.3)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
