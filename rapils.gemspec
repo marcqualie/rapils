@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.email = [
     'marc@marcqualie.com',
   ]
-  spec.homepage = 'https://github.com/signisto/rapils'
+  spec.homepage = 'https://github.com/marcqualie/rapils'
   spec.summary = 'Opinionated out-of-the-box API + UI framework'
   spec.description = 'Opinionated out-of-the-box API + UI framework'
   spec.license = 'MIT'
