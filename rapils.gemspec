@@ -25,5 +25,6 @@ Gem::Specification.new do |spec|
     'README.md',
   ]
 
+  spec.add_dependency 'diffcrypt', '~> 0.3'
   spec.add_dependency 'rails', '~> 6.0.3', '>= 6.0.3.1'
 end
