@@ -4,5 +4,6 @@ require 'action_controller/api'
 module Rapils
   class BaseController < ActionController::API
     include Concerns::JsonErrors
+    include Pundit
   end
 end
