@@ -8,10 +8,10 @@ Gem::Specification.new do |spec|
   spec.name = 'rapils'
   spec.version = Rapils::VERSION
   spec.authors = [
-    'Marc Qualie'
+    'Marc Qualie',
   ]
   spec.email = [
-    'marc@marcqualie.com'
+    'marc@marcqualie.com',
   ]
   spec.homepage = 'https://github.com/signisto/rapils'
   spec.summary = 'Opinionated out-of-the-box API + UI framework'
@@ -29,4 +29,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'rails', '~> 6.0.3', '>= 6.0.3.1'
 
   spec.add_development_dependency 'rubocop'
+  spec.add_development_dependency 'simplecov', '~> 0.17.0' # CodeClimate not compatible with 0.18+ yet - https://github.com/codeclimate/test-reporter/issues/413
+  spec.add_development_dependency 'simplecov-lcov', '< 0.8'
 end
