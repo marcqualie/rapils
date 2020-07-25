@@ -1,6 +1,8 @@
 # Rapils
 
-Opinionated out-of-the-box API + UI framework.
+**NOTE:** Not for production use. This is my own experimental framework I use for small prototype projects. Use at your own risk.
+
+Opinionated out-of-the-box Rails API framework.
 
 
 
