@@ -4,10 +4,19 @@ jobs:
   build:
     docker:
       - image: circleci/ruby:2.6.6
+        environment:
+          DATABASE_URL: postgres://circleci:circleci@localhost/nubuno-test
+      - image: circleci/postgres:11.6-alpine
+        environment:
+          POSTGRES_DB: rapils-test
+          POSTGRES_USER: circleci
+          POSTGRES_PASSWORD: circleci
     steps:
       - checkout
       - run: gem install bundler:2.1.4
       - run: bundle install
+      - run: dockerize -wait tcp://localhost:5432 -timeout 1m
+      - run: bundle exec rake db:create db:schema:load
       # - run:
       #     name: Setup Code Climate test-reporter
       #     command: |
