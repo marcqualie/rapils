@@ -11,13 +11,18 @@ AllCops:
 
 
 # Metrics
+Metrics/AbcSize:
+  Max: 16
 Metrics/BlockLength:
   Exclude:
     - spec/**/*
     - '*.gemspec'
 Metrics/CyclomaticComplexity:
   Max: 10
+Layout/LineLength:
+  Enabled: false
 Metrics/MethodLength:
+  Max: 16
   Exclude:
     - db/migrate/**/*
 

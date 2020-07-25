@@ -1,4 +1,5 @@
 require 'rapils/policies/permission_policy'
+
 # Handles management of permissions via REST interface
 module Rapils
   module Controllers
@@ -9,16 +10,13 @@ module Rapils
           subject_id: params[:subject_id],
         )
 
-        # Bit annoying to do with pundit, so do this
-        subject = @resource.subject
-        permission = current_user.permissions.find_by(subject: subject)
-        raise(Pundit::NotAuthorizedError, "Not allowed to manage #{subject.class.name.downcase.pluralize}") unless permission
-        raise(Pundit::NotAuthorizedError, "Not allowed to manage #{subject.class.name.downcase.pluralize}") unless permission.actions.include?('all') || permission.actions.include?('manage')
+        manual_authorize @resource
 
         user = User.find_by!(email: params[:email])
-        @resource.owner = user
-        @resource.actions = params[:actions]
-        @resource.save!
+        @resource.update!(
+          owner: user,
+          actions: params[:actions],
+        )
 
         render json: ::PermissionSerializer.new(@resource).serialized_json, status: 201
       end
@@ -35,6 +33,17 @@ module Rapils
         @resource.destroy!
 
         head 204
+      end
+
+      protected
+
+      def manual_authorize(resource)
+        subject = resource.subject
+        permission = current_user.permissions.find_by(subject: subject)
+
+        message = "Not allowed to manage #{subject.class.name.downcase.pluralize}"
+        raise(Pundit::NotAuthorizedError, message) unless permission
+        raise(Pundit::NotAuthorizedError, message) unless permission.actions.include?('all') || permission.actions.include?('manage')
       end
     end
   end
