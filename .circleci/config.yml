@@ -4,10 +4,28 @@ jobs:
   build:
     docker:
       - image: circleci/ruby:2.6.6
+        environment:
+          RAILS_ENV: test
+          DATABASE_URL: postgres://circleci:circleci@localhost/rapils_test
+      - image: circleci/postgres:11.6-alpine
+        environment:
+          POSTGRES_DB: rapils_test
+          POSTGRES_USER: circleci
+          POSTGRES_PASSWORD: circleci
+    working_directory: /mnt/ramdisk
     steps:
       - checkout
+      - restore_cache:
+          keys:
+            - bundler-{{ checksum "Gemfile.lock" }}-{{ .Environment.CACHE_VERSION }}
       - run: gem install bundler:2.1.4
-      - run: bundle install
+      - run: bundle install --path=vendor/bundle --jobs=4 --retry=3
+      - save_cache:
+          key: bundler-{{ checksum "Gemfile.lock" }}-{{ .Environment.CACHE_VERSION }}
+          paths:
+            - vendor/bundle
+      - run: dockerize -wait tcp://localhost:5432 -timeout 1m
+      - run: bundle exec rake db:schema:load
       # - run:
       #     name: Setup Code Climate test-reporter
       #     command: |

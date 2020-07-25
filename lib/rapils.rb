@@ -1,4 +1,4 @@
-require 'rapils/railtie'
+require 'rapils/engine'
 require 'rapils/version'
 
 module Rapils

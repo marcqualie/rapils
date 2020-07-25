@@ -1,10 +1,11 @@
 # Rapils
-Short description and motivation.
 
-## Usage
-How to use my plugin.
+Opinionated out-of-the-box API + UI framework.
+
+
 
 ## Installation
+
 Add this line to your application's Gemfile:
 
 ```ruby
@@ -16,13 +17,23 @@ And then execute:
 $ bundle
 ```
 
-Or install it yourself as:
-```bash
-$ gem install rapils
+### Models
+
+In order to use the models, you need to extend the base models inside your application:
+
+```ruby
+class User < Rapils::Models::User
+end
 ```
 
+
+
 ## Contributing
+
 Contribution directions go here.
 
+
+
 ## License
+
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).

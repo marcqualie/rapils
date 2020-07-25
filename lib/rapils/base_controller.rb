@@ -1,9 +1,10 @@
 require 'rapils/concerns/json_errors'
-require 'action_controller/api'
+require 'rapils/concerns/token_auth'
 
 module Rapils
   class BaseController < ActionController::API
     include Concerns::JsonErrors
+    include Concerns::TokenAuth
     include Pundit
   end
 end

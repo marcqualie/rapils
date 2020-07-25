@@ -1,7 +1,25 @@
 AllCops:
   NewCops: enable
+  TargetRubyVersion: 2.6
   Exclude:
+    - .circleci/*
     - bin/*
+    - coverage/**/*
+    - spec/dummy/**/*
+    - vendor/**/*
+
+
+
+# Metrics
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*
+    - '*.gemspec'
+Metrics/CyclomaticComplexity:
+  Max: 10
+Metrics/MethodLength:
+  Exclude:
+    - db/migrate/**/*
 
 
 # Style
