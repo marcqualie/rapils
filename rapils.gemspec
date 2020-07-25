@@ -29,7 +29,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'pundit', '~> 2.1'
   spec.add_dependency 'rails', '~> 6.0.3', '>= 6.0.3.1'
 
-  # spec.add_development_dependency 'database_cleaner'
   spec.add_development_dependency 'factory_bot_rails'
   spec.add_development_dependency 'pg'
   spec.add_development_dependency 'rspec-rails'

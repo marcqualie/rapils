@@ -4,3 +4,4 @@ pkg/
 coverage
 *.log
 tmp
+.ruby-version
