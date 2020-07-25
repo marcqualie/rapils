@@ -4,6 +4,7 @@ module Rapils
       self.abstract_class = true
 
       has_many :access_tokens, class_name: '::AccessToken'
+      has_many :permissions, class_name: '::Permission', as: :owner
 
       def admin?
         admin_roles == ['*']

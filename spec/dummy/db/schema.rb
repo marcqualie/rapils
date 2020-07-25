@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_24_223120) do
+ActiveRecord::Schema.define(version: 2020_07_25_132221) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -28,6 +28,20 @@ ActiveRecord::Schema.define(version: 2020_07_24_223120) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["token"], name: "index_access_tokens_on_token", unique: true
     t.index ["user_id"], name: "index_access_tokens_on_user_id"
+  end
+
+  create_table "permissions", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.string "owner_type"
+    t.uuid "owner_id"
+    t.string "subject_type"
+    t.uuid "subject_id"
+    t.string "actions", default: [], null: false, array: true
+    t.boolean "recursive", default: false, null: false
+    t.datetime "expires_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["owner_type", "owner_id"], name: "index_permissions_on_owner_type_and_owner_id"
+    t.index ["subject_type", "subject_id"], name: "index_permissions_on_subject_type_and_subject_id"
   end
 
   create_table "users", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
