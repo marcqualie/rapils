@@ -6,6 +6,10 @@ Dir["#{__dir__}/controllers/**/*.rb"].sort.each { |f| require f }
 require_relative './models/base_record'
 Dir["#{__dir__}/models/**/*.rb"].sort.each { |f| require f }
 
+# Load all serializers
+require_relative './serializers/base_serializer'
+Dir["#{__dir__}/serializers/**/*.rb"].sort.each { |f| require f }
+
 module Rapils
   class Engine < Rails::Engine
     isolate_namespace Rapils
