@@ -198,7 +198,7 @@ DEPENDENCIES
   pg
   rapils!
   rspec-rails
-  rubocop
+  rubocop (~> 0.88)
   simplecov (~> 0.17.0)
   simplecov-lcov (< 0.8)
 

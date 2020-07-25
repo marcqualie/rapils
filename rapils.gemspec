@@ -33,7 +33,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'factory_bot_rails'
   spec.add_development_dependency 'pg'
   spec.add_development_dependency 'rspec-rails'
-  spec.add_development_dependency 'rubocop'
+  spec.add_development_dependency 'rubocop', '~> 0.88'
   spec.add_development_dependency 'simplecov', '~> 0.17.0' # CodeClimate not compatible with 0.18+ yet - https://github.com/codeclimate/test-reporter/issues/413
   spec.add_development_dependency 'simplecov-lcov', '< 0.8'
 end
