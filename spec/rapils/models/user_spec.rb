@@ -1,3 +1,4 @@
 describe Rapils::Models::User do
-  it { should be_a Rapils::Models::BaseRecord }
+  it { expect(described_class).to be < Rapils::Models::BaseRecord }
+  it { expect(described_class.abstract_class).to eq true }
 end

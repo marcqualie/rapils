@@ -1,7 +1,7 @@
 module Rapils
   module Models
     class AccessToken < BaseRecord
-      self.table_name = 'access_tokens'
+      self.abstract_class = true
 
       belongs_to :user, class_name: '::User'
 
