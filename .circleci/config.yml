@@ -5,10 +5,10 @@ jobs:
     docker:
       - image: circleci/ruby:2.6.6
         environment:
-          DATABASE_URL: postgres://circleci:circleci@localhost/nubuno-test
+          DATABASE_URL: postgres://circleci:circleci@localhost/rapils_test
       - image: circleci/postgres:11.6-alpine
         environment:
-          POSTGRES_DB: rapils-test
+          POSTGRES_DB: rapils_test
           POSTGRES_USER: circleci
           POSTGRES_PASSWORD: circleci
     steps:
