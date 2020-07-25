@@ -15,24 +15,6 @@ module Rapils
       g.system_tests = nil
     end
 
-    # Email
-    config.action_mailer.raise_delivery_errors = true
-    config.action_mailer.perform_deliveries = true
-    config.action_mailer.delivery_method = :smtp
-    config.action_mailer.smtp_settings = {
-      address: ENV['SMTP_HOST'] || 'localhost',
-      port: ENV['SMTP_PORT'] || 1025,
-      domain: ENV['SMTP_DOMAIN'] || 'localhozt',
-      user_name: ENV['SMTP_USERNAME'],
-      password: ENV['SMTP_PASSWORD'],
-      authentication: ENV['SMTP_AUTHENTICATION'] || 'plain',
-      enable_starttls_auto: true,
-    }
-    config.action_mailer.default_url_options = {
-      scheme: 'https',
-      host: ENV['WWW_HOST'] || 'localhost',
-    }
-
     # Override encryption with diffcrypt
     def encrypted(path, key_path: 'config/master.key', env_key: 'RAILS_MASTER_KEY')
       Diffcrypt::Rails::EncryptedConfiguration.new(
