@@ -4,6 +4,7 @@ PATH
     rapils (0.1.0)
       diffcrypt (~> 0.3)
       fast_jsonapi (~> 1.5)
+      pg (>= 0.18, < 2.0)
       pundit (~> 2.1)
       rails (~> 6.0.3, >= 6.0.3.1)
 
