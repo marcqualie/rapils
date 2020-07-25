@@ -1,5 +1,20 @@
 module Rapils
-  def self.setup(dependencies)
+  DEFAULT_DEPENDENCIES = [
+    'active_model/railtie',
+    # 'active_job/railtie',
+    'active_record/railtie',
+    # 'active_storage/engine',
+    'action_controller/railtie',
+    'action_mailer/railtie',
+    # 'action_mailbox/engine',
+    # 'action_text/engine',
+    'action_view/railtie',
+    # 'action_cable/engine',
+    # 'sprockets/railtie',
+    # 'rails/test_unit/railtie',
+  ].freeze
+
+  def self.setup(dependencies = DEFAULT_DEPENDENCIES)
     # Load core rails dependencies
     require 'rails'
     dependencies.each { |dependency| require dependency }

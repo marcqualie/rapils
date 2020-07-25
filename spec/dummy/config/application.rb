@@ -1,20 +1,7 @@
 require_relative 'boot'
 
 require 'rapils/setup'
-Rapils.setup([
-  'active_model/railtie',
-  # 'active_job/railtie',
-  'active_record/railtie',
-  # 'active_storage/engine',
-  'action_controller/railtie',
-  'action_mailer/railtie',
-  # 'action_mailbox/engine',
-  # 'action_text/engine',
-  'action_view/railtie',
-  # 'action_cable/engine',
-  'sprockets/railtie'
-  # 'rails/test_unit/railtie'
-])
+Rapils.setup
 
 module Dummy
   class Application < Rapils::Application
