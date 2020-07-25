@@ -1,23 +1,23 @@
 require_relative 'boot'
 
-require "rails"
-# Pick the frameworks you want:
-require "active_model/railtie"
-# require "active_job/railtie"
-require "active_record/railtie"
-# require "active_storage/engine"
-require "action_controller/railtie"
-require "action_mailer/railtie"
-# require "action_view/railtie"
-# require "action_cable/engine"
-require "sprockets/railtie"
-# require "rails/test_unit/railtie"
-
-Bundler.require(*Rails.groups)
-require 'rapils'
+require 'rapils/setup'
+Rapils.setup([
+  'active_model/railtie',
+  # 'active_job/railtie',
+  'active_record/railtie',
+  # 'active_storage/engine',
+  'action_controller/railtie',
+  'action_mailer/railtie',
+  # 'action_mailbox/engine',
+  # 'action_text/engine',
+  'action_view/railtie',
+  # 'action_cable/engine',
+  'sprockets/railtie'
+  # 'rails/test_unit/railtie'
+])
 
 module Dummy
-  class Application < Rails::Application
+  class Application < Rapils::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
