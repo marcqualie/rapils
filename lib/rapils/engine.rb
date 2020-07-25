@@ -1,4 +1,6 @@
-require 'rapils/base_controller'
+# Load all controllers
+require 'rapils/controllers/base_controller'
+Dir["#{__dir__}/controllers/**/*.rb"].sort.each { |f| require f }
 
 # Load all models
 require_relative './models/base_record'
