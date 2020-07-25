@@ -29,7 +29,10 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'pundit', '~> 2.1'
   spec.add_dependency 'rails', '~> 6.0.3', '>= 6.0.3.1'
 
-  spec.add_development_dependency 'rspec'
+  # spec.add_development_dependency 'database_cleaner'
+  spec.add_development_dependency 'factory_bot_rails'
+  spec.add_development_dependency 'pg'
+  spec.add_development_dependency 'rspec-rails'
   spec.add_development_dependency 'rubocop'
   spec.add_development_dependency 'simplecov', '~> 0.17.0' # CodeClimate not compatible with 0.18+ yet - https://github.com/codeclimate/test-reporter/issues/413
   spec.add_development_dependency 'simplecov-lcov', '< 0.8'

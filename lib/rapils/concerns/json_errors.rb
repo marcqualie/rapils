@@ -1,7 +1,7 @@
-require 'active_model'
-require 'active_record/errors'
-require 'active_record/validations'
-require 'active_support/concern'
+# require 'active_model'
+# require 'active_record/errors'
+# require 'active_record/validations'
+# require 'active_support/concern'
 require 'pundit'
 
 module Rapils

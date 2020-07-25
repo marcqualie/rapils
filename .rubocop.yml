@@ -2,6 +2,20 @@ AllCops:
   NewCops: enable
   Exclude:
     - bin/*
+    - spec/dummy/**/*
+
+
+
+# Metrics
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*
+    - '*.gemspec'
+Metrics/CyclomaticComplexity:
+  Max: 10
+Metrics/MethodLength:
+  Exclude:
+    - db/migrate/**/*
 
 
 # Style

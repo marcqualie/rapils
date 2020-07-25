@@ -12,10 +12,26 @@ SimpleCov.formatters = SimpleCov::Formatter::MultiFormatter.new(
 )
 SimpleCov.start
 
+# Boot rails dummy application
+ENV['RAILS_ENV'] = 'test'
+require_relative './dummy/config/environment'
+ActiveRecord::Migrator.migrations_paths = [File.expand_path('./dummy/db/migrate', __dir__)]
+# require 'rails/test_help'
+require 'rspec/rails'
+
+# Load in engine
 require 'rapils'
-require 'rapils/railtie'
+
+# Load all support files
+Dir["#{__dir__}/support/**/*.rb"].sort.each { |f| require f }
+
+# Factories/Fixtures
+require 'factory_bot'
+FactoryBot.find_definitions
 
 RSpec.configure do |config|
+  config.include FactoryBot::Syntax::Methods
+
   config.expect_with :rspec do |expectations|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
   end
@@ -34,4 +50,9 @@ RSpec.configure do |config|
 
   config.order = :random
   Kernel.srand config.seed
+
+  # Rails specifics
+  config.use_transactional_fixtures = true
+  config.infer_spec_type_from_file_location!
+  config.filter_rails_from_backtrace!
 end

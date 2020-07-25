@@ -1,0 +1,1160 @@
+  [1m[35m (36.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "dummy_test"[0m
+  [1m[35m (101.1ms)[0m  [1m[35mCREATE DATABASE "dummy_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (0)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", "2020-07-24 22:27:05.590300"], ["updated_at", "2020-07-24 22:27:05.590300"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "83e6e9510955ef04f606b0339b1f0d53760104f9"], ["created_at", "2020-07-24 22:27:05.595648"], ["updated_at", "2020-07-24 22:27:05.595648"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2735718569030447490)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2735718569030447490)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (8138.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "dummy_test"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (8351.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "dummy_test"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2735718569030447490)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20200724222614)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200724222614"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateAccessTokens (20200724223120)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "access_tokens" ("id" bigserial primary key, "user_id" uuid, "type" character varying DEFAULT 'AccessToken' NOT NULL, "name" character varying NOT NULL, "token" character varying NOT NULL, "actions" character varying[] DEFAULT '{}' NOT NULL, "last_used_at" timestamp, "expires_at" timestamp, "invalidated_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_access_tokens_on_token" ON "access_tokens"  ("token")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_access_tokens_on_user_id" ON "access_tokens"  ("user_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200724223120"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2735718569030447490)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (8409.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "dummy_test"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (8408.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "dummy_test"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2735718569030447490)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(2735718569030447490)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2735718569030447490)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2735718569030447490)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (8340.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "dummy_test"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (8395.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "dummy_test"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (27.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "dummy_test"[0m
+  [1m[35m (110.4ms)[0m  [1m[35mCREATE DATABASE "dummy_test" ENCODING = 'unicode'[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2735718569030447490)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20200724222614)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "email" character varying NOT NULL, "admin_roles" character varying[] DEFAULT '{}', "auth0_uid" character varying NOT NULL, "access_granted_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_auth0_uid" ON "users"  ("auth0_uid")[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200724222614"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateAccessTokens (20200724223120)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "access_tokens" ("id" bigserial primary key, "user_id" uuid, "type" character varying DEFAULT 'AccessToken' NOT NULL, "name" character varying NOT NULL, "token" character varying NOT NULL, "actions" character varying[] DEFAULT '{}' NOT NULL, "last_used_at" timestamp, "expires_at" timestamp, "invalidated_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_access_tokens_on_token" ON "access_tokens"  ("token")[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX  "index_access_tokens_on_user_id" ON "access_tokens"  ("user_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200724223120"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", "2020-07-25 10:58:04.768464"], ["updated_at", "2020-07-25 10:58:04.768464"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2735718569030447490)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (23.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "dummy_test"[0m
+  [1m[35m (44.6ms)[0m  [1m[35mCREATE DATABASE "dummy_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "access_tokens" CASCADE[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "access_tokens" ("id" bigserial primary key, "user_id" uuid, "type" character varying DEFAULT 'AccessToken' NOT NULL, "name" character varying NOT NULL, "token" character varying NOT NULL, "actions" character varying[] DEFAULT '{}' NOT NULL, "last_used_at" timestamp, "expires_at" timestamp, "invalidated_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_access_tokens_on_token" ON "access_tokens"  ("token")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_access_tokens_on_user_id" ON "access_tokens"  ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "email" character varying NOT NULL, "admin_roles" character varying[] DEFAULT '{}', "auth0_uid" character varying NOT NULL, "access_granted_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_auth0_uid" ON "users"  ("auth0_uid")[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200724223120)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", "2020-07-25 10:58:30.740603"], ["updated_at", "2020-07-25 10:58:30.740603"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "8224d0b03548a613536ffa12c3167cded2b39c4d"], ["created_at", "2020-07-25 10:58:30.744160"], ["updated_at", "2020-07-25 10:58:30.744160"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (27.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "dummy_test"[0m
+  [1m[35m (103.9ms)[0m  [1m[35mCREATE DATABASE "dummy_test" ENCODING = 'unicode'[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2735718569030447490)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20200724222614)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "email" character varying NOT NULL, "admin_roles" character varying[] DEFAULT '{}', "auth0_uid" character varying NOT NULL, "access_granted_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_auth0_uid" ON "users"  ("auth0_uid")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[36mprimary::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200724222614"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateAccessTokens (20200724223120)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "access_tokens" ("id" bigserial primary key, "user_id" uuid, "name" character varying NOT NULL, "token" character varying NOT NULL, "actions" character varying[] DEFAULT '{}' NOT NULL, "last_used_at" timestamp, "expires_at" timestamp, "invalidated_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_access_tokens_on_token" ON "access_tokens"  ("token")[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE  INDEX  "index_access_tokens_on_user_id" ON "access_tokens"  ("user_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200724223120"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", "2020-07-25 10:59:29.064438"], ["updated_at", "2020-07-25 10:59:29.064438"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(2735718569030447490)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (21.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "dummy_test"[0m
+  [1m[35m (87.9ms)[0m  [1m[35mCREATE DATABASE "dummy_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "access_tokens" CASCADE[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "access_tokens" ("id" bigserial primary key, "user_id" uuid, "name" character varying NOT NULL, "token" character varying NOT NULL, "actions" character varying[] DEFAULT '{}' NOT NULL, "last_used_at" timestamp, "expires_at" timestamp, "invalidated_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_access_tokens_on_token" ON "access_tokens"  ("token")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_access_tokens_on_user_id" ON "access_tokens"  ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "email" character varying NOT NULL, "admin_roles" character varying[] DEFAULT '{}', "auth0_uid" character varying NOT NULL, "access_granted_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_auth0_uid" ON "users"  ("auth0_uid")[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200724223120)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", "2020-07-25 10:59:42.963485"], ["updated_at", "2020-07-25 10:59:42.963485"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "34daf0de7e884e57eed9442933732b1e7ca45419"], ["created_at", "2020-07-25 10:59:42.966455"], ["updated_at", "2020-07-25 10:59:42.966455"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRapils::Models::AccessToken Create (1.3ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["token", "xxx"], ["expires_at", "2020-07-25 10:58:43.120215"], ["created_at", "2020-07-25 10:59:43.131813"], ["updated_at", "2020-07-25 10:59:43.131813"]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRapils::Models::AccessToken Create (0.4ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["token", "xxx"], ["created_at", "2020-07-25 10:59:43.135064"], ["updated_at", "2020-07-25 10:59:43.135064"]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRapils::Models::AccessToken Create (0.7ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["token", "xxx"], ["created_at", "2020-07-25 10:59:43.136950"], ["updated_at", "2020-07-25 10:59:43.136950"]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRapils::Models::AccessToken Create (0.4ms)[0m  [1m[32mINSERT INTO "access_tokens" ("token", "invalidated_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["token", "xxx"], ["invalidated_at", "2020-07-25 10:58:43.139314"], ["created_at", "2020-07-25 10:59:43.139836"], ["updated_at", "2020-07-25 10:59:43.139836"]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRapils::Models::User Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user1@example.com"], ["auth0_uid", "auth0|t1"], ["created_at", "2020-07-25 11:00:32.039224"], ["updated_at", "2020-07-25 11:00:32.039224"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user2@example.com"], ["auth0_uid", "auth0|t2"], ["created_at", "2020-07-25 11:00:32.052408"], ["updated_at", "2020-07-25 11:00:32.052408"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user3@example.com"], ["auth0_uid", "auth0|t3"], ["created_at", "2020-07-25 11:00:32.054415"], ["updated_at", "2020-07-25 11:00:32.054415"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user4@example.com"], ["auth0_uid", "auth0|t4"], ["created_at", "2020-07-25 11:00:32.057192"], ["updated_at", "2020-07-25 11:00:32.057192"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user5@example.com"], ["auth0_uid", "auth0|t5"], ["created_at", "2020-07-25 11:00:32.059815"], ["updated_at", "2020-07-25 11:00:32.059815"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user6@example.com"], ["auth0_uid", "auth0|t6"], ["created_at", "2020-07-25 11:00:32.061869"], ["updated_at", "2020-07-25 11:00:32.061869"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user7@example.com"], ["auth0_uid", "auth0|t7"], ["created_at", "2020-07-25 11:00:32.064054"], ["updated_at", "2020-07-25 11:00:32.064054"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user8@example.com"], ["auth0_uid", "auth0|t8"], ["created_at", "2020-07-25 11:00:32.066064"], ["updated_at", "2020-07-25 11:00:32.066064"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRapils::Models::User Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user1@example.com"], ["auth0_uid", "auth0|t1"], ["created_at", "2020-07-25 11:01:01.116066"], ["updated_at", "2020-07-25 11:01:01.116066"]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRapils::Models::User Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user2@example.com"], ["auth0_uid", "auth0|t2"], ["created_at", "2020-07-25 11:01:01.119023"], ["updated_at", "2020-07-25 11:01:01.119023"]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRapils::Models::User Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user3@example.com"], ["auth0_uid", "auth0|t3"], ["created_at", "2020-07-25 11:01:01.120894"], ["updated_at", "2020-07-25 11:01:01.120894"]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRapils::Models::User Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user4@example.com"], ["auth0_uid", "auth0|t4"], ["created_at", "2020-07-25 11:01:01.123594"], ["updated_at", "2020-07-25 11:01:01.123594"]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRapils::Models::User Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user5@example.com"], ["auth0_uid", "auth0|t5"], ["created_at", "2020-07-25 11:01:01.126865"], ["updated_at", "2020-07-25 11:01:01.126865"]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRapils::Models::User Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user6@example.com"], ["auth0_uid", "auth0|t6"], ["created_at", "2020-07-25 11:01:01.128455"], ["updated_at", "2020-07-25 11:01:01.128455"]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRapils::Models::User Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user7@example.com"], ["auth0_uid", "auth0|t7"], ["created_at", "2020-07-25 11:01:01.129790"], ["updated_at", "2020-07-25 11:01:01.129790"]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRapils::Models::User Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user8@example.com"], ["auth0_uid", "auth0|t8"], ["created_at", "2020-07-25 11:01:01.131146"], ["updated_at", "2020-07-25 11:01:01.131146"]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (4.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user1@example.com"], ["auth0_uid", "auth0|t1"], ["created_at", "2020-07-25 11:03:13.835462"], ["updated_at", "2020-07-25 11:03:13.835462"]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user2@example.com"], ["auth0_uid", "auth0|t2"], ["created_at", "2020-07-25 11:03:13.849065"], ["updated_at", "2020-07-25 11:03:13.849065"]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user3@example.com"], ["auth0_uid", "auth0|t3"], ["created_at", "2020-07-25 11:03:13.851219"], ["updated_at", "2020-07-25 11:03:13.851219"]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user4@example.com"], ["auth0_uid", "auth0|t4"], ["created_at", "2020-07-25 11:03:13.853287"], ["updated_at", "2020-07-25 11:03:13.853287"]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user5@example.com"], ["auth0_uid", "auth0|t5"], ["created_at", "2020-07-25 11:03:13.855176"], ["updated_at", "2020-07-25 11:03:13.855176"]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user6@example.com"], ["auth0_uid", "auth0|t6"], ["created_at", "2020-07-25 11:03:13.857145"], ["updated_at", "2020-07-25 11:03:13.857145"]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user7@example.com"], ["auth0_uid", "auth0|t7"], ["created_at", "2020-07-25 11:03:13.859707"], ["updated_at", "2020-07-25 11:03:13.859707"]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user8@example.com"], ["auth0_uid", "auth0|t8"], ["created_at", "2020-07-25 11:03:13.862389"], ["updated_at", "2020-07-25 11:03:13.862389"]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (4.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user1@example.com"], ["auth0_uid", "auth0|t1"], ["created_at", "2020-07-25 11:05:55.079499"], ["updated_at", "2020-07-25 11:05:55.079499"]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user2@example.com"], ["auth0_uid", "auth0|t2"], ["created_at", "2020-07-25 11:05:55.094813"], ["updated_at", "2020-07-25 11:05:55.094813"]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user3@example.com"], ["auth0_uid", "auth0|t3"], ["created_at", "2020-07-25 11:05:55.097212"], ["updated_at", "2020-07-25 11:05:55.097212"]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user4@example.com"], ["auth0_uid", "auth0|t4"], ["created_at", "2020-07-25 11:05:55.099254"], ["updated_at", "2020-07-25 11:05:55.099254"]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user5@example.com"], ["auth0_uid", "auth0|t5"], ["created_at", "2020-07-25 11:05:55.111344"], ["updated_at", "2020-07-25 11:05:55.111344"]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user6@example.com"], ["auth0_uid", "auth0|t6"], ["created_at", "2020-07-25 11:05:55.114710"], ["updated_at", "2020-07-25 11:05:55.114710"]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user7@example.com"], ["auth0_uid", "auth0|t7"], ["created_at", "2020-07-25 11:05:55.116779"], ["updated_at", "2020-07-25 11:05:55.116779"]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user8@example.com"], ["auth0_uid", "auth0|t8"], ["created_at", "2020-07-25 11:05:55.118841"], ["updated_at", "2020-07-25 11:05:55.118841"]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (23.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "dummy_test"[0m
+  [1m[35m (90.7ms)[0m  [1m[35mCREATE DATABASE "dummy_test" ENCODING = 'unicode'[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2735718569030447490)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20200724222614)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "email" character varying NOT NULL, "admin_roles" character varying[] DEFAULT '{}', "auth0_uid" character varying NOT NULL, "access_granted_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_auth0_uid" ON "users"  ("auth0_uid")[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200724222614"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateAccessTokens (20200724223120)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "access_tokens" ("id" bigserial primary key, "user_id" uuid, "name" character varying NOT NULL, "token" character varying NOT NULL, "actions" character varying[] DEFAULT '{}' NOT NULL, "last_used_at" timestamp, "expires_at" timestamp, "invalidated_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_access_tokens_on_token" ON "access_tokens"  ("token")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_access_tokens_on_user_id" ON "access_tokens"  ("user_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200724223120"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", "2020-07-25 11:06:14.285471"], ["updated_at", "2020-07-25 11:06:14.285471"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2735718569030447490)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user1@example.com"], ["auth0_uid", "auth0|t1"], ["created_at", "2020-07-25 11:06:18.320947"], ["updated_at", "2020-07-25 11:06:18.320947"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.6ms)[0m  [1m[32mINSERT INTO "access_tokens" ("name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:06:18.345805"], ["updated_at", "2020-07-25 11:06:18.345805"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user2@example.com"], ["auth0_uid", "auth0|t2"], ["created_at", "2020-07-25 11:06:18.348748"], ["updated_at", "2020-07-25 11:06:18.348748"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:06:18.350033"], ["updated_at", "2020-07-25 11:06:18.350033"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user3@example.com"], ["auth0_uid", "auth0|t3"], ["created_at", "2020-07-25 11:06:18.351977"], ["updated_at", "2020-07-25 11:06:18.351977"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.1ms)[0m  [1m[32mINSERT INTO "access_tokens" ("name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:06:18.353172"], ["updated_at", "2020-07-25 11:06:18.353172"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user4@example.com"], ["auth0_uid", "auth0|t4"], ["created_at", "2020-07-25 11:06:18.354958"], ["updated_at", "2020-07-25 11:06:18.354958"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:06:18.356199"], ["updated_at", "2020-07-25 11:06:18.356199"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user5@example.com"], ["auth0_uid", "auth0|t5"], ["created_at", "2020-07-25 11:06:18.358266"], ["updated_at", "2020-07-25 11:06:18.358266"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.1ms)[0m  [1m[32mINSERT INTO "access_tokens" ("name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:06:18.359289"], ["updated_at", "2020-07-25 11:06:18.359289"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user6@example.com"], ["auth0_uid", "auth0|t6"], ["created_at", "2020-07-25 11:06:18.361220"], ["updated_at", "2020-07-25 11:06:18.361220"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.4ms)[0m  [1m[32mINSERT INTO "access_tokens" ("name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:06:18.362358"], ["updated_at", "2020-07-25 11:06:18.362358"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user7@example.com"], ["auth0_uid", "auth0|t7"], ["created_at", "2020-07-25 11:06:18.365587"], ["updated_at", "2020-07-25 11:06:18.365587"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("name", "token", "expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Test Token"], ["token", "xxx"], ["expires_at", "2020-07-25 11:05:18.365065"], ["created_at", "2020-07-25 11:06:18.366867"], ["updated_at", "2020-07-25 11:06:18.366867"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user8@example.com"], ["auth0_uid", "auth0|t8"], ["created_at", "2020-07-25 11:06:18.368944"], ["updated_at", "2020-07-25 11:06:18.368944"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("name", "token", "invalidated_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Test Token"], ["token", "xxx"], ["invalidated_at", "2020-07-25 11:05:18.368553"], ["created_at", "2020-07-25 11:06:18.370062"], ["updated_at", "2020-07-25 11:06:18.370062"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user1@example.com"], ["auth0_uid", "auth0|t1"], ["created_at", "2020-07-25 11:06:42.386190"], ["updated_at", "2020-07-25 11:06:42.386190"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.4ms)[0m  [1m[32mINSERT INTO "access_tokens" ("name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:06:42.409309"], ["updated_at", "2020-07-25 11:06:42.409309"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user2@example.com"], ["auth0_uid", "auth0|t2"], ["created_at", "2020-07-25 11:06:42.412221"], ["updated_at", "2020-07-25 11:06:42.412221"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:06:42.413661"], ["updated_at", "2020-07-25 11:06:42.413661"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user3@example.com"], ["auth0_uid", "auth0|t3"], ["created_at", "2020-07-25 11:06:42.416364"], ["updated_at", "2020-07-25 11:06:42.416364"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:06:42.418693"], ["updated_at", "2020-07-25 11:06:42.418693"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user4@example.com"], ["auth0_uid", "auth0|t4"], ["created_at", "2020-07-25 11:06:42.421612"], ["updated_at", "2020-07-25 11:06:42.421612"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:06:42.423659"], ["updated_at", "2020-07-25 11:06:42.423659"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user5@example.com"], ["auth0_uid", "auth0|t5"], ["created_at", "2020-07-25 11:06:42.426330"], ["updated_at", "2020-07-25 11:06:42.426330"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:06:42.427498"], ["updated_at", "2020-07-25 11:06:42.427498"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user6@example.com"], ["auth0_uid", "auth0|t6"], ["created_at", "2020-07-25 11:06:42.430173"], ["updated_at", "2020-07-25 11:06:42.430173"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("name", "token", "invalidated_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Test Token"], ["token", "xxx"], ["invalidated_at", "2020-07-25 11:05:42.429600"], ["created_at", "2020-07-25 11:06:42.431699"], ["updated_at", "2020-07-25 11:06:42.431699"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user7@example.com"], ["auth0_uid", "auth0|t7"], ["created_at", "2020-07-25 11:06:42.434193"], ["updated_at", "2020-07-25 11:06:42.434193"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("name", "token", "expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Test Token"], ["token", "xxx"], ["expires_at", "2020-07-25 11:05:42.433769"], ["created_at", "2020-07-25 11:06:42.435259"], ["updated_at", "2020-07-25 11:06:42.435259"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user8@example.com"], ["auth0_uid", "auth0|t8"], ["created_at", "2020-07-25 11:06:42.437882"], ["updated_at", "2020-07-25 11:06:42.437882"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:06:42.440211"], ["updated_at", "2020-07-25 11:06:42.440211"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user1@example.com"], ["auth0_uid", "auth0|t1"], ["created_at", "2020-07-25 11:08:19.623367"], ["updated_at", "2020-07-25 11:08:19.623367"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.3ms)[0m  [1m[32mINSERT INTO "access_tokens" ("name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:08:19.639597"], ["updated_at", "2020-07-25 11:08:19.639597"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user2@example.com"], ["auth0_uid", "auth0|t2"], ["created_at", "2020-07-25 11:08:19.642447"], ["updated_at", "2020-07-25 11:08:19.642447"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:08:19.643615"], ["updated_at", "2020-07-25 11:08:19.643615"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user3@example.com"], ["auth0_uid", "auth0|t3"], ["created_at", "2020-07-25 11:08:19.647128"], ["updated_at", "2020-07-25 11:08:19.647128"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("name", "token", "invalidated_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Test Token"], ["token", "xxx"], ["invalidated_at", "2020-07-25 11:07:19.646381"], ["created_at", "2020-07-25 11:08:19.648573"], ["updated_at", "2020-07-25 11:08:19.648573"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user4@example.com"], ["auth0_uid", "auth0|t4"], ["created_at", "2020-07-25 11:08:19.651267"], ["updated_at", "2020-07-25 11:08:19.651267"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("name", "token", "expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Test Token"], ["token", "xxx"], ["expires_at", "2020-07-25 11:07:19.650816"], ["created_at", "2020-07-25 11:08:19.652442"], ["updated_at", "2020-07-25 11:08:19.652442"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user5@example.com"], ["auth0_uid", "auth0|t5"], ["created_at", "2020-07-25 11:08:19.654738"], ["updated_at", "2020-07-25 11:08:19.654738"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:08:19.655979"], ["updated_at", "2020-07-25 11:08:19.655979"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user6@example.com"], ["auth0_uid", "auth0|t6"], ["created_at", "2020-07-25 11:08:19.658002"], ["updated_at", "2020-07-25 11:08:19.658002"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:08:19.659233"], ["updated_at", "2020-07-25 11:08:19.659233"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user7@example.com"], ["auth0_uid", "auth0|t7"], ["created_at", "2020-07-25 11:08:19.661361"], ["updated_at", "2020-07-25 11:08:19.661361"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:08:19.662877"], ["updated_at", "2020-07-25 11:08:19.662877"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user8@example.com"], ["auth0_uid", "auth0|t8"], ["created_at", "2020-07-25 11:08:19.665794"], ["updated_at", "2020-07-25 11:08:19.665794"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:08:19.667607"], ["updated_at", "2020-07-25 11:08:19.667607"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user1@example.com"], ["auth0_uid", "auth0|t1"], ["created_at", "2020-07-25 11:08:47.838064"], ["updated_at", "2020-07-25 11:08:47.838064"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.4ms)[0m  [1m[32mINSERT INTO "access_tokens" ("name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:08:47.852061"], ["updated_at", "2020-07-25 11:08:47.852061"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (4.0ms)[0m  [1m[34mSELECT "access_tokens"."id" AS t0_r0, "access_tokens"."user_id" AS t0_r1, "access_tokens"."name" AS t0_r2, "access_tokens"."token" AS t0_r3, "access_tokens"."actions" AS t0_r4, "access_tokens"."last_used_at" AS t0_r5, "access_tokens"."expires_at" AS t0_r6, "access_tokens"."invalidated_at" AS t0_r7, "access_tokens"."created_at" AS t0_r8, "access_tokens"."updated_at" AS t0_r9, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."admin_roles" AS t1_r3, "users"."auth0_uid" AS t1_r4, "users"."access_granted_at" AS t1_r5, "users"."created_at" AS t1_r6, "users"."updated_at" AS t1_r7 FROM "access_tokens" LEFT OUTER JOIN "users" ON "users"."id" = "access_tokens"."user_id" WHERE "access_tokens"."token" = $1 LIMIT $2[0m  [["token", "xxx"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user2@example.com"], ["auth0_uid", "auth0|t2"], ["created_at", "2020-07-25 11:08:47.869762"], ["updated_at", "2020-07-25 11:08:47.869762"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("name", "token", "invalidated_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Test Token"], ["token", "xxx"], ["invalidated_at", "2020-07-25 11:07:47.869204"], ["created_at", "2020-07-25 11:08:47.871040"], ["updated_at", "2020-07-25 11:08:47.871040"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[34mSELECT "access_tokens"."id" AS t0_r0, "access_tokens"."user_id" AS t0_r1, "access_tokens"."name" AS t0_r2, "access_tokens"."token" AS t0_r3, "access_tokens"."actions" AS t0_r4, "access_tokens"."last_used_at" AS t0_r5, "access_tokens"."expires_at" AS t0_r6, "access_tokens"."invalidated_at" AS t0_r7, "access_tokens"."created_at" AS t0_r8, "access_tokens"."updated_at" AS t0_r9, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."admin_roles" AS t1_r3, "users"."auth0_uid" AS t1_r4, "users"."access_granted_at" AS t1_r5, "users"."created_at" AS t1_r6, "users"."updated_at" AS t1_r7 FROM "access_tokens" LEFT OUTER JOIN "users" ON "users"."id" = "access_tokens"."user_id" WHERE "access_tokens"."token" = $1 LIMIT $2[0m  [["token", "xxx"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user3@example.com"], ["auth0_uid", "auth0|t3"], ["created_at", "2020-07-25 11:08:47.874734"], ["updated_at", "2020-07-25 11:08:47.874734"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:08:47.875877"], ["updated_at", "2020-07-25 11:08:47.875877"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[34mSELECT "access_tokens"."id" AS t0_r0, "access_tokens"."user_id" AS t0_r1, "access_tokens"."name" AS t0_r2, "access_tokens"."token" AS t0_r3, "access_tokens"."actions" AS t0_r4, "access_tokens"."last_used_at" AS t0_r5, "access_tokens"."expires_at" AS t0_r6, "access_tokens"."invalidated_at" AS t0_r7, "access_tokens"."created_at" AS t0_r8, "access_tokens"."updated_at" AS t0_r9, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."admin_roles" AS t1_r3, "users"."auth0_uid" AS t1_r4, "users"."access_granted_at" AS t1_r5, "users"."created_at" AS t1_r6, "users"."updated_at" AS t1_r7 FROM "access_tokens" LEFT OUTER JOIN "users" ON "users"."id" = "access_tokens"."user_id" WHERE "access_tokens"."token" = $1 LIMIT $2[0m  [["token", "xxx"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user4@example.com"], ["auth0_uid", "auth0|t4"], ["created_at", "2020-07-25 11:08:47.880117"], ["updated_at", "2020-07-25 11:08:47.880117"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("name", "token", "expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Test Token"], ["token", "xxx"], ["expires_at", "2020-07-25 11:07:47.879269"], ["created_at", "2020-07-25 11:08:47.881809"], ["updated_at", "2020-07-25 11:08:47.881809"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[34mSELECT "access_tokens"."id" AS t0_r0, "access_tokens"."user_id" AS t0_r1, "access_tokens"."name" AS t0_r2, "access_tokens"."token" AS t0_r3, "access_tokens"."actions" AS t0_r4, "access_tokens"."last_used_at" AS t0_r5, "access_tokens"."expires_at" AS t0_r6, "access_tokens"."invalidated_at" AS t0_r7, "access_tokens"."created_at" AS t0_r8, "access_tokens"."updated_at" AS t0_r9, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."admin_roles" AS t1_r3, "users"."auth0_uid" AS t1_r4, "users"."access_granted_at" AS t1_r5, "users"."created_at" AS t1_r6, "users"."updated_at" AS t1_r7 FROM "access_tokens" LEFT OUTER JOIN "users" ON "users"."id" = "access_tokens"."user_id" WHERE "access_tokens"."token" = $1 LIMIT $2[0m  [["token", "xxx"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user5@example.com"], ["auth0_uid", "auth0|t5"], ["created_at", "2020-07-25 11:08:47.885690"], ["updated_at", "2020-07-25 11:08:47.885690"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:08:47.887082"], ["updated_at", "2020-07-25 11:08:47.887082"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[34mSELECT "access_tokens"."id" AS t0_r0, "access_tokens"."user_id" AS t0_r1, "access_tokens"."name" AS t0_r2, "access_tokens"."token" AS t0_r3, "access_tokens"."actions" AS t0_r4, "access_tokens"."last_used_at" AS t0_r5, "access_tokens"."expires_at" AS t0_r6, "access_tokens"."invalidated_at" AS t0_r7, "access_tokens"."created_at" AS t0_r8, "access_tokens"."updated_at" AS t0_r9, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."admin_roles" AS t1_r3, "users"."auth0_uid" AS t1_r4, "users"."access_granted_at" AS t1_r5, "users"."created_at" AS t1_r6, "users"."updated_at" AS t1_r7 FROM "access_tokens" LEFT OUTER JOIN "users" ON "users"."id" = "access_tokens"."user_id" WHERE "access_tokens"."token" = $1 LIMIT $2[0m  [["token", "xxx-404"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user6@example.com"], ["auth0_uid", "auth0|t6"], ["created_at", "2020-07-25 11:08:47.890558"], ["updated_at", "2020-07-25 11:08:47.890558"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:08:47.891847"], ["updated_at", "2020-07-25 11:08:47.891847"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[34mSELECT "access_tokens"."id" AS t0_r0, "access_tokens"."user_id" AS t0_r1, "access_tokens"."name" AS t0_r2, "access_tokens"."token" AS t0_r3, "access_tokens"."actions" AS t0_r4, "access_tokens"."last_used_at" AS t0_r5, "access_tokens"."expires_at" AS t0_r6, "access_tokens"."invalidated_at" AS t0_r7, "access_tokens"."created_at" AS t0_r8, "access_tokens"."updated_at" AS t0_r9, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."admin_roles" AS t1_r3, "users"."auth0_uid" AS t1_r4, "users"."access_granted_at" AS t1_r5, "users"."created_at" AS t1_r6, "users"."updated_at" AS t1_r7 FROM "access_tokens" LEFT OUTER JOIN "users" ON "users"."id" = "access_tokens"."user_id" WHERE "access_tokens"."token" = $1 LIMIT $2[0m  [["token", "xxx"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user7@example.com"], ["auth0_uid", "auth0|t7"], ["created_at", "2020-07-25 11:08:47.894896"], ["updated_at", "2020-07-25 11:08:47.894896"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:08:47.897002"], ["updated_at", "2020-07-25 11:08:47.897002"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user8@example.com"], ["auth0_uid", "auth0|t8"], ["created_at", "2020-07-25 11:08:47.899983"], ["updated_at", "2020-07-25 11:08:47.899983"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:08:47.901411"], ["updated_at", "2020-07-25 11:08:47.901411"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[34mSELECT "access_tokens"."id" AS t0_r0, "access_tokens"."user_id" AS t0_r1, "access_tokens"."name" AS t0_r2, "access_tokens"."token" AS t0_r3, "access_tokens"."actions" AS t0_r4, "access_tokens"."last_used_at" AS t0_r5, "access_tokens"."expires_at" AS t0_r6, "access_tokens"."invalidated_at" AS t0_r7, "access_tokens"."created_at" AS t0_r8, "access_tokens"."updated_at" AS t0_r9, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."admin_roles" AS t1_r3, "users"."auth0_uid" AS t1_r4, "users"."access_granted_at" AS t1_r5, "users"."created_at" AS t1_r6, "users"."updated_at" AS t1_r7 FROM "access_tokens" LEFT OUTER JOIN "users" ON "users"."id" = "access_tokens"."user_id" WHERE "access_tokens"."token" = $1 LIMIT $2[0m  [["token", "xxx"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (22.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "dummy_test"[0m
+  [1m[35m (105.9ms)[0m  [1m[35mCREATE DATABASE "dummy_test" ENCODING = 'unicode'[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2735718569030447490)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20200724222614)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" uuid DEFAULT gen_random_uuid() NOT NULL PRIMARY KEY, "name" character varying, "email" character varying NOT NULL, "admin_roles" character varying[] DEFAULT '{}', "auth0_uid" character varying NOT NULL, "access_granted_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2735718569030447490)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (20.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "dummy_test"[0m
+  [1m[35m (89.8ms)[0m  [1m[35mCREATE DATABASE "dummy_test" ENCODING = 'unicode'[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2735718569030447490)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20200724222614)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (10.9ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "pgcrypto"[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" uuid DEFAULT gen_random_uuid() NOT NULL PRIMARY KEY, "name" character varying, "email" character varying NOT NULL, "admin_roles" character varying[] DEFAULT '{}', "auth0_uid" character varying NOT NULL, "access_granted_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_auth0_uid" ON "users"  ("auth0_uid")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200724222614"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateAccessTokens (20200724223120)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "access_tokens" ("id" uuid DEFAULT gen_random_uuid() NOT NULL PRIMARY KEY, "user_id" uuid, "name" character varying NOT NULL, "token" character varying NOT NULL, "actions" character varying[] DEFAULT '{}' NOT NULL, "last_used_at" timestamp, "expires_at" timestamp, "invalidated_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE  INDEX  "index_access_tokens_on_user_id" ON "access_tokens"  ("user_id")[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_access_tokens_on_token" ON "access_tokens"  ("token")[0m
+  [1m[35m (1.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2735718569030447490)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (4.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "dummy_test"[0m
+  [1m[35m (97.5ms)[0m  [1m[35mCREATE DATABASE "dummy_test" ENCODING = 'unicode'[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2735718569030447490)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20200724222614)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (10.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "pgcrypto"[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" uuid DEFAULT gen_random_uuid() NOT NULL PRIMARY KEY, "name" character varying, "email" character varying NOT NULL, "admin_roles" character varying[] DEFAULT '{}', "auth0_uid" character varying NOT NULL, "access_granted_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_auth0_uid" ON "users"  ("auth0_uid")[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200724222614"]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateAccessTokens (20200724223120)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "access_tokens" ("id" uuid DEFAULT gen_random_uuid() NOT NULL PRIMARY KEY, "user_id" uuid, "name" character varying NOT NULL, "token" character varying NOT NULL, "actions" character varying[] DEFAULT '{}' NOT NULL, "last_used_at" timestamp, "expires_at" timestamp, "invalidated_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX  "index_access_tokens_on_user_id" ON "access_tokens"  ("user_id")[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_access_tokens_on_token" ON "access_tokens"  ("token")[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200724223120"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", "2020-07-25 11:18:31.259934"], ["updated_at", "2020-07-25 11:18:31.259934"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2735718569030447490)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user1@example.com"], ["auth0_uid", "auth0|t1"], ["created_at", "2020-07-25 11:18:43.152499"], ["updated_at", "2020-07-25 11:18:43.152499"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.6ms)[0m  [1m[32mINSERT INTO "access_tokens" ("user_id", "name", "token", "expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", "d2d34bec-29ea-4746-b807-e4e9ea7ec9c8"], ["name", "Test Token"], ["token", "xxx"], ["expires_at", "2020-07-25 11:17:43.130996"], ["created_at", "2020-07-25 11:18:43.167611"], ["updated_at", "2020-07-25 11:18:43.167611"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (6.1ms)[0m  [1m[34mSELECT "access_tokens"."id" AS t0_r0, "access_tokens"."user_id" AS t0_r1, "access_tokens"."name" AS t0_r2, "access_tokens"."token" AS t0_r3, "access_tokens"."actions" AS t0_r4, "access_tokens"."last_used_at" AS t0_r5, "access_tokens"."expires_at" AS t0_r6, "access_tokens"."invalidated_at" AS t0_r7, "access_tokens"."created_at" AS t0_r8, "access_tokens"."updated_at" AS t0_r9, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."admin_roles" AS t1_r3, "users"."auth0_uid" AS t1_r4, "users"."access_granted_at" AS t1_r5, "users"."created_at" AS t1_r6, "users"."updated_at" AS t1_r7 FROM "access_tokens" LEFT OUTER JOIN "users" ON "users"."id" = "access_tokens"."user_id" WHERE "access_tokens"."token" = $1 LIMIT $2[0m  [["token", "xxx"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user2@example.com"], ["auth0_uid", "auth0|t2"], ["created_at", "2020-07-25 11:18:43.187958"], ["updated_at", "2020-07-25 11:18:43.187958"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("user_id", "name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", "9a1cf65e-04b3-4ca0-a12f-dd40fb80586f"], ["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:18:43.189802"], ["updated_at", "2020-07-25 11:18:43.189802"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[34mSELECT "access_tokens"."id" AS t0_r0, "access_tokens"."user_id" AS t0_r1, "access_tokens"."name" AS t0_r2, "access_tokens"."token" AS t0_r3, "access_tokens"."actions" AS t0_r4, "access_tokens"."last_used_at" AS t0_r5, "access_tokens"."expires_at" AS t0_r6, "access_tokens"."invalidated_at" AS t0_r7, "access_tokens"."created_at" AS t0_r8, "access_tokens"."updated_at" AS t0_r9, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."admin_roles" AS t1_r3, "users"."auth0_uid" AS t1_r4, "users"."access_granted_at" AS t1_r5, "users"."created_at" AS t1_r6, "users"."updated_at" AS t1_r7 FROM "access_tokens" LEFT OUTER JOIN "users" ON "users"."id" = "access_tokens"."user_id" WHERE "access_tokens"."token" = $1 LIMIT $2[0m  [["token", "xxx"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user3@example.com"], ["auth0_uid", "auth0|t3"], ["created_at", "2020-07-25 11:18:43.194236"], ["updated_at", "2020-07-25 11:18:43.194236"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("user_id", "name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", "2d43ecb3-ff81-459d-be34-38eb02c349a1"], ["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:18:43.195441"], ["updated_at", "2020-07-25 11:18:43.195441"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[34mSELECT "access_tokens"."id" AS t0_r0, "access_tokens"."user_id" AS t0_r1, "access_tokens"."name" AS t0_r2, "access_tokens"."token" AS t0_r3, "access_tokens"."actions" AS t0_r4, "access_tokens"."last_used_at" AS t0_r5, "access_tokens"."expires_at" AS t0_r6, "access_tokens"."invalidated_at" AS t0_r7, "access_tokens"."created_at" AS t0_r8, "access_tokens"."updated_at" AS t0_r9, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."admin_roles" AS t1_r3, "users"."auth0_uid" AS t1_r4, "users"."access_granted_at" AS t1_r5, "users"."created_at" AS t1_r6, "users"."updated_at" AS t1_r7 FROM "access_tokens" LEFT OUTER JOIN "users" ON "users"."id" = "access_tokens"."user_id" WHERE "access_tokens"."token" = $1 LIMIT $2[0m  [["token", "xxx"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user4@example.com"], ["auth0_uid", "auth0|t4"], ["created_at", "2020-07-25 11:18:43.199029"], ["updated_at", "2020-07-25 11:18:43.199029"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("user_id", "name", "token", "invalidated_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", "4fa44473-73dc-4849-a47c-930f312d1bc7"], ["name", "Test Token"], ["token", "xxx"], ["invalidated_at", "2020-07-25 11:17:43.198633"], ["created_at", "2020-07-25 11:18:43.200150"], ["updated_at", "2020-07-25 11:18:43.200150"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[34mSELECT "access_tokens"."id" AS t0_r0, "access_tokens"."user_id" AS t0_r1, "access_tokens"."name" AS t0_r2, "access_tokens"."token" AS t0_r3, "access_tokens"."actions" AS t0_r4, "access_tokens"."last_used_at" AS t0_r5, "access_tokens"."expires_at" AS t0_r6, "access_tokens"."invalidated_at" AS t0_r7, "access_tokens"."created_at" AS t0_r8, "access_tokens"."updated_at" AS t0_r9, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."admin_roles" AS t1_r3, "users"."auth0_uid" AS t1_r4, "users"."access_granted_at" AS t1_r5, "users"."created_at" AS t1_r6, "users"."updated_at" AS t1_r7 FROM "access_tokens" LEFT OUTER JOIN "users" ON "users"."id" = "access_tokens"."user_id" WHERE "access_tokens"."token" = $1 LIMIT $2[0m  [["token", "xxx"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user5@example.com"], ["auth0_uid", "auth0|t5"], ["created_at", "2020-07-25 11:18:43.203608"], ["updated_at", "2020-07-25 11:18:43.203608"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("user_id", "name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", "9ed03cdc-b73d-479f-b434-e2f2897e121f"], ["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:18:43.204862"], ["updated_at", "2020-07-25 11:18:43.204862"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[34mSELECT "access_tokens"."id" AS t0_r0, "access_tokens"."user_id" AS t0_r1, "access_tokens"."name" AS t0_r2, "access_tokens"."token" AS t0_r3, "access_tokens"."actions" AS t0_r4, "access_tokens"."last_used_at" AS t0_r5, "access_tokens"."expires_at" AS t0_r6, "access_tokens"."invalidated_at" AS t0_r7, "access_tokens"."created_at" AS t0_r8, "access_tokens"."updated_at" AS t0_r9, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."admin_roles" AS t1_r3, "users"."auth0_uid" AS t1_r4, "users"."access_granted_at" AS t1_r5, "users"."created_at" AS t1_r6, "users"."updated_at" AS t1_r7 FROM "access_tokens" LEFT OUTER JOIN "users" ON "users"."id" = "access_tokens"."user_id" WHERE "access_tokens"."token" = $1 LIMIT $2[0m  [["token", "xxx"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user6@example.com"], ["auth0_uid", "auth0|t6"], ["created_at", "2020-07-25 11:18:43.209787"], ["updated_at", "2020-07-25 11:18:43.209787"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("user_id", "name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", "53fc7205-d638-49d8-b4df-b9aa88bcc046"], ["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:18:43.211577"], ["updated_at", "2020-07-25 11:18:43.211577"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user7@example.com"], ["auth0_uid", "auth0|t7"], ["created_at", "2020-07-25 11:18:43.214149"], ["updated_at", "2020-07-25 11:18:43.214149"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("user_id", "name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", "ad87d0da-6084-41e4-9f89-62b7c5ed0541"], ["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:18:43.215444"], ["updated_at", "2020-07-25 11:18:43.215444"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[34mSELECT "access_tokens"."id" AS t0_r0, "access_tokens"."user_id" AS t0_r1, "access_tokens"."name" AS t0_r2, "access_tokens"."token" AS t0_r3, "access_tokens"."actions" AS t0_r4, "access_tokens"."last_used_at" AS t0_r5, "access_tokens"."expires_at" AS t0_r6, "access_tokens"."invalidated_at" AS t0_r7, "access_tokens"."created_at" AS t0_r8, "access_tokens"."updated_at" AS t0_r9, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."admin_roles" AS t1_r3, "users"."auth0_uid" AS t1_r4, "users"."access_granted_at" AS t1_r5, "users"."created_at" AS t1_r6, "users"."updated_at" AS t1_r7 FROM "access_tokens" LEFT OUTER JOIN "users" ON "users"."id" = "access_tokens"."user_id" WHERE "access_tokens"."token" = $1 LIMIT $2[0m  [["token", "xxx"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user8@example.com"], ["auth0_uid", "auth0|t8"], ["created_at", "2020-07-25 11:18:43.218826"], ["updated_at", "2020-07-25 11:18:43.218826"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("user_id", "name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", "7da922db-c95b-4152-9f74-08a5a2ff06ec"], ["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:18:43.220047"], ["updated_at", "2020-07-25 11:18:43.220047"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[34mSELECT "access_tokens"."id" AS t0_r0, "access_tokens"."user_id" AS t0_r1, "access_tokens"."name" AS t0_r2, "access_tokens"."token" AS t0_r3, "access_tokens"."actions" AS t0_r4, "access_tokens"."last_used_at" AS t0_r5, "access_tokens"."expires_at" AS t0_r6, "access_tokens"."invalidated_at" AS t0_r7, "access_tokens"."created_at" AS t0_r8, "access_tokens"."updated_at" AS t0_r9, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."admin_roles" AS t1_r3, "users"."auth0_uid" AS t1_r4, "users"."access_granted_at" AS t1_r5, "users"."created_at" AS t1_r6, "users"."updated_at" AS t1_r7 FROM "access_tokens" LEFT OUTER JOIN "users" ON "users"."id" = "access_tokens"."user_id" WHERE "access_tokens"."token" = $1 LIMIT $2[0m  [["token", "xxx-404"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (4.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user1@example.com"], ["auth0_uid", "auth0|t1"], ["created_at", "2020-07-25 11:20:16.632916"], ["updated_at", "2020-07-25 11:20:16.632916"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.3ms)[0m  [1m[32mINSERT INTO "access_tokens" ("user_id", "name", "token", "expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", "d8fece7b-4717-4ccf-ab13-271a5b53f36f"], ["name", "Test Token"], ["token", "xxx"], ["expires_at", "2020-07-25 11:19:16.614413"], ["created_at", "2020-07-25 11:20:16.651991"], ["updated_at", "2020-07-25 11:20:16.651991"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[34mSELECT "access_tokens"."id" AS t0_r0, "access_tokens"."user_id" AS t0_r1, "access_tokens"."name" AS t0_r2, "access_tokens"."token" AS t0_r3, "access_tokens"."actions" AS t0_r4, "access_tokens"."last_used_at" AS t0_r5, "access_tokens"."expires_at" AS t0_r6, "access_tokens"."invalidated_at" AS t0_r7, "access_tokens"."created_at" AS t0_r8, "access_tokens"."updated_at" AS t0_r9, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."admin_roles" AS t1_r3, "users"."auth0_uid" AS t1_r4, "users"."access_granted_at" AS t1_r5, "users"."created_at" AS t1_r6, "users"."updated_at" AS t1_r7 FROM "access_tokens" LEFT OUTER JOIN "users" ON "users"."id" = "access_tokens"."user_id" WHERE "access_tokens"."token" = $1 LIMIT $2[0m  [["token", "xxx"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user2@example.com"], ["auth0_uid", "auth0|t2"], ["created_at", "2020-07-25 11:20:16.665212"], ["updated_at", "2020-07-25 11:20:16.665212"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("user_id", "name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", "f3cad498-7b0c-4fab-bbc6-3a300545b747"], ["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:20:16.666454"], ["updated_at", "2020-07-25 11:20:16.666454"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[34mSELECT "access_tokens"."id" AS t0_r0, "access_tokens"."user_id" AS t0_r1, "access_tokens"."name" AS t0_r2, "access_tokens"."token" AS t0_r3, "access_tokens"."actions" AS t0_r4, "access_tokens"."last_used_at" AS t0_r5, "access_tokens"."expires_at" AS t0_r6, "access_tokens"."invalidated_at" AS t0_r7, "access_tokens"."created_at" AS t0_r8, "access_tokens"."updated_at" AS t0_r9, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."admin_roles" AS t1_r3, "users"."auth0_uid" AS t1_r4, "users"."access_granted_at" AS t1_r5, "users"."created_at" AS t1_r6, "users"."updated_at" AS t1_r7 FROM "access_tokens" LEFT OUTER JOIN "users" ON "users"."id" = "access_tokens"."user_id" WHERE "access_tokens"."token" = $1 LIMIT $2[0m  [["token", "xxx"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user3@example.com"], ["auth0_uid", "auth0|t3"], ["created_at", "2020-07-25 11:20:16.671055"], ["updated_at", "2020-07-25 11:20:16.671055"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("user_id", "name", "token", "invalidated_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", "b33e83e7-06c6-4df1-b377-2022611205ac"], ["name", "Test Token"], ["token", "xxx"], ["invalidated_at", "2020-07-25 11:19:16.670165"], ["created_at", "2020-07-25 11:20:16.672507"], ["updated_at", "2020-07-25 11:20:16.672507"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[34mSELECT "access_tokens"."id" AS t0_r0, "access_tokens"."user_id" AS t0_r1, "access_tokens"."name" AS t0_r2, "access_tokens"."token" AS t0_r3, "access_tokens"."actions" AS t0_r4, "access_tokens"."last_used_at" AS t0_r5, "access_tokens"."expires_at" AS t0_r6, "access_tokens"."invalidated_at" AS t0_r7, "access_tokens"."created_at" AS t0_r8, "access_tokens"."updated_at" AS t0_r9, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."admin_roles" AS t1_r3, "users"."auth0_uid" AS t1_r4, "users"."access_granted_at" AS t1_r5, "users"."created_at" AS t1_r6, "users"."updated_at" AS t1_r7 FROM "access_tokens" LEFT OUTER JOIN "users" ON "users"."id" = "access_tokens"."user_id" WHERE "access_tokens"."token" = $1 LIMIT $2[0m  [["token", "xxx"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user4@example.com"], ["auth0_uid", "auth0|t4"], ["created_at", "2020-07-25 11:20:16.676325"], ["updated_at", "2020-07-25 11:20:16.676325"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("user_id", "name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", "a1f62cbd-984b-40ee-8f22-c8f4376fe175"], ["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:20:16.677515"], ["updated_at", "2020-07-25 11:20:16.677515"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[34mSELECT "access_tokens"."id" AS t0_r0, "access_tokens"."user_id" AS t0_r1, "access_tokens"."name" AS t0_r2, "access_tokens"."token" AS t0_r3, "access_tokens"."actions" AS t0_r4, "access_tokens"."last_used_at" AS t0_r5, "access_tokens"."expires_at" AS t0_r6, "access_tokens"."invalidated_at" AS t0_r7, "access_tokens"."created_at" AS t0_r8, "access_tokens"."updated_at" AS t0_r9, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."admin_roles" AS t1_r3, "users"."auth0_uid" AS t1_r4, "users"."access_granted_at" AS t1_r5, "users"."created_at" AS t1_r6, "users"."updated_at" AS t1_r7 FROM "access_tokens" LEFT OUTER JOIN "users" ON "users"."id" = "access_tokens"."user_id" WHERE "access_tokens"."token" = $1 LIMIT $2[0m  [["token", "xxx"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user5@example.com"], ["auth0_uid", "auth0|t5"], ["created_at", "2020-07-25 11:20:16.681764"], ["updated_at", "2020-07-25 11:20:16.681764"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("user_id", "name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", "70d64614-bfbd-460d-845c-a9d986d34e32"], ["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:20:16.683042"], ["updated_at", "2020-07-25 11:20:16.683042"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[34mSELECT "access_tokens"."id" AS t0_r0, "access_tokens"."user_id" AS t0_r1, "access_tokens"."name" AS t0_r2, "access_tokens"."token" AS t0_r3, "access_tokens"."actions" AS t0_r4, "access_tokens"."last_used_at" AS t0_r5, "access_tokens"."expires_at" AS t0_r6, "access_tokens"."invalidated_at" AS t0_r7, "access_tokens"."created_at" AS t0_r8, "access_tokens"."updated_at" AS t0_r9, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."admin_roles" AS t1_r3, "users"."auth0_uid" AS t1_r4, "users"."access_granted_at" AS t1_r5, "users"."created_at" AS t1_r6, "users"."updated_at" AS t1_r7 FROM "access_tokens" LEFT OUTER JOIN "users" ON "users"."id" = "access_tokens"."user_id" WHERE "access_tokens"."token" = $1 LIMIT $2[0m  [["token", "xxx"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user6@example.com"], ["auth0_uid", "auth0|t6"], ["created_at", "2020-07-25 11:20:16.687318"], ["updated_at", "2020-07-25 11:20:16.687318"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("user_id", "name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", "11f4f7a3-f40a-4aee-bad7-22e356023214"], ["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:20:16.689326"], ["updated_at", "2020-07-25 11:20:16.689326"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user7@example.com"], ["auth0_uid", "auth0|t7"], ["created_at", "2020-07-25 11:20:16.692299"], ["updated_at", "2020-07-25 11:20:16.692299"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("user_id", "name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", "b100e019-a667-434f-8135-735d778ddcc0"], ["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:20:16.693803"], ["updated_at", "2020-07-25 11:20:16.693803"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[34mSELECT "access_tokens"."id" AS t0_r0, "access_tokens"."user_id" AS t0_r1, "access_tokens"."name" AS t0_r2, "access_tokens"."token" AS t0_r3, "access_tokens"."actions" AS t0_r4, "access_tokens"."last_used_at" AS t0_r5, "access_tokens"."expires_at" AS t0_r6, "access_tokens"."invalidated_at" AS t0_r7, "access_tokens"."created_at" AS t0_r8, "access_tokens"."updated_at" AS t0_r9, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."admin_roles" AS t1_r3, "users"."auth0_uid" AS t1_r4, "users"."access_granted_at" AS t1_r5, "users"."created_at" AS t1_r6, "users"."updated_at" AS t1_r7 FROM "access_tokens" LEFT OUTER JOIN "users" ON "users"."id" = "access_tokens"."user_id" WHERE "access_tokens"."token" = $1 LIMIT $2[0m  [["token", "xxx-404"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user8@example.com"], ["auth0_uid", "auth0|t8"], ["created_at", "2020-07-25 11:20:16.697179"], ["updated_at", "2020-07-25 11:20:16.697179"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("user_id", "name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", "f9ad1add-b879-4ce7-a9c0-8c265c8c72b1"], ["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:20:16.698465"], ["updated_at", "2020-07-25 11:20:16.698465"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[34mSELECT "access_tokens"."id" AS t0_r0, "access_tokens"."user_id" AS t0_r1, "access_tokens"."name" AS t0_r2, "access_tokens"."token" AS t0_r3, "access_tokens"."actions" AS t0_r4, "access_tokens"."last_used_at" AS t0_r5, "access_tokens"."expires_at" AS t0_r6, "access_tokens"."invalidated_at" AS t0_r7, "access_tokens"."created_at" AS t0_r8, "access_tokens"."updated_at" AS t0_r9, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."admin_roles" AS t1_r3, "users"."auth0_uid" AS t1_r4, "users"."access_granted_at" AS t1_r5, "users"."created_at" AS t1_r6, "users"."updated_at" AS t1_r7 FROM "access_tokens" LEFT OUTER JOIN "users" ON "users"."id" = "access_tokens"."user_id" WHERE "access_tokens"."token" = $1 LIMIT $2[0m  [["token", "xxx"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (4.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user1@example.com"], ["auth0_uid", "auth0|t1"], ["created_at", "2020-07-25 11:20:46.532918"], ["updated_at", "2020-07-25 11:20:46.532918"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.3ms)[0m  [1m[32mINSERT INTO "access_tokens" ("user_id", "name", "token", "invalidated_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", "d3d6a722-2486-4000-bb07-532c6e67e381"], ["name", "Test Token"], ["token", "xxx"], ["invalidated_at", "2020-07-25 11:19:46.514439"], ["created_at", "2020-07-25 11:20:46.553432"], ["updated_at", "2020-07-25 11:20:46.553432"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[34mSELECT "access_tokens"."id" AS t0_r0, "access_tokens"."user_id" AS t0_r1, "access_tokens"."name" AS t0_r2, "access_tokens"."token" AS t0_r3, "access_tokens"."actions" AS t0_r4, "access_tokens"."last_used_at" AS t0_r5, "access_tokens"."expires_at" AS t0_r6, "access_tokens"."invalidated_at" AS t0_r7, "access_tokens"."created_at" AS t0_r8, "access_tokens"."updated_at" AS t0_r9, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."admin_roles" AS t1_r3, "users"."auth0_uid" AS t1_r4, "users"."access_granted_at" AS t1_r5, "users"."created_at" AS t1_r6, "users"."updated_at" AS t1_r7 FROM "access_tokens" LEFT OUTER JOIN "users" ON "users"."id" = "access_tokens"."user_id" WHERE "access_tokens"."token" = $1 LIMIT $2[0m  [["token", "xxx"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user2@example.com"], ["auth0_uid", "auth0|t2"], ["created_at", "2020-07-25 11:20:46.567145"], ["updated_at", "2020-07-25 11:20:46.567145"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("user_id", "name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", "e45781f6-87e3-46c3-acba-a4c211cadd43"], ["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:20:46.568491"], ["updated_at", "2020-07-25 11:20:46.568491"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[34mSELECT "access_tokens"."id" AS t0_r0, "access_tokens"."user_id" AS t0_r1, "access_tokens"."name" AS t0_r2, "access_tokens"."token" AS t0_r3, "access_tokens"."actions" AS t0_r4, "access_tokens"."last_used_at" AS t0_r5, "access_tokens"."expires_at" AS t0_r6, "access_tokens"."invalidated_at" AS t0_r7, "access_tokens"."created_at" AS t0_r8, "access_tokens"."updated_at" AS t0_r9, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."admin_roles" AS t1_r3, "users"."auth0_uid" AS t1_r4, "users"."access_granted_at" AS t1_r5, "users"."created_at" AS t1_r6, "users"."updated_at" AS t1_r7 FROM "access_tokens" LEFT OUTER JOIN "users" ON "users"."id" = "access_tokens"."user_id" WHERE "access_tokens"."token" = $1 LIMIT $2[0m  [["token", "xxx"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user3@example.com"], ["auth0_uid", "auth0|t3"], ["created_at", "2020-07-25 11:20:46.573654"], ["updated_at", "2020-07-25 11:20:46.573654"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("user_id", "name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", "257f79c7-f9fa-489f-8819-e8fb532a6f10"], ["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:20:46.574947"], ["updated_at", "2020-07-25 11:20:46.574947"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[34mSELECT "access_tokens"."id" AS t0_r0, "access_tokens"."user_id" AS t0_r1, "access_tokens"."name" AS t0_r2, "access_tokens"."token" AS t0_r3, "access_tokens"."actions" AS t0_r4, "access_tokens"."last_used_at" AS t0_r5, "access_tokens"."expires_at" AS t0_r6, "access_tokens"."invalidated_at" AS t0_r7, "access_tokens"."created_at" AS t0_r8, "access_tokens"."updated_at" AS t0_r9, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."admin_roles" AS t1_r3, "users"."auth0_uid" AS t1_r4, "users"."access_granted_at" AS t1_r5, "users"."created_at" AS t1_r6, "users"."updated_at" AS t1_r7 FROM "access_tokens" LEFT OUTER JOIN "users" ON "users"."id" = "access_tokens"."user_id" WHERE "access_tokens"."token" = $1 LIMIT $2[0m  [["token", "xxx"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user4@example.com"], ["auth0_uid", "auth0|t4"], ["created_at", "2020-07-25 11:20:46.579601"], ["updated_at", "2020-07-25 11:20:46.579601"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("user_id", "name", "token", "expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", "04da9bcd-72fa-4445-9758-038a504f0054"], ["name", "Test Token"], ["token", "xxx"], ["expires_at", "2020-07-25 11:19:46.579174"], ["created_at", "2020-07-25 11:20:46.580740"], ["updated_at", "2020-07-25 11:20:46.580740"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[34mSELECT "access_tokens"."id" AS t0_r0, "access_tokens"."user_id" AS t0_r1, "access_tokens"."name" AS t0_r2, "access_tokens"."token" AS t0_r3, "access_tokens"."actions" AS t0_r4, "access_tokens"."last_used_at" AS t0_r5, "access_tokens"."expires_at" AS t0_r6, "access_tokens"."invalidated_at" AS t0_r7, "access_tokens"."created_at" AS t0_r8, "access_tokens"."updated_at" AS t0_r9, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."admin_roles" AS t1_r3, "users"."auth0_uid" AS t1_r4, "users"."access_granted_at" AS t1_r5, "users"."created_at" AS t1_r6, "users"."updated_at" AS t1_r7 FROM "access_tokens" LEFT OUTER JOIN "users" ON "users"."id" = "access_tokens"."user_id" WHERE "access_tokens"."token" = $1 LIMIT $2[0m  [["token", "xxx"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user5@example.com"], ["auth0_uid", "auth0|t5"], ["created_at", "2020-07-25 11:20:46.584078"], ["updated_at", "2020-07-25 11:20:46.584078"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("user_id", "name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", "a4b4af1c-e7f0-4895-a770-b164d7d8dff8"], ["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:20:46.585431"], ["updated_at", "2020-07-25 11:20:46.585431"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user6@example.com"], ["auth0_uid", "auth0|t6"], ["created_at", "2020-07-25 11:20:46.587483"], ["updated_at", "2020-07-25 11:20:46.587483"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("user_id", "name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", "f70270c6-ce39-4dab-b213-53289c4a6e3b"], ["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:20:46.588840"], ["updated_at", "2020-07-25 11:20:46.588840"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[34mSELECT "access_tokens"."id" AS t0_r0, "access_tokens"."user_id" AS t0_r1, "access_tokens"."name" AS t0_r2, "access_tokens"."token" AS t0_r3, "access_tokens"."actions" AS t0_r4, "access_tokens"."last_used_at" AS t0_r5, "access_tokens"."expires_at" AS t0_r6, "access_tokens"."invalidated_at" AS t0_r7, "access_tokens"."created_at" AS t0_r8, "access_tokens"."updated_at" AS t0_r9, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."admin_roles" AS t1_r3, "users"."auth0_uid" AS t1_r4, "users"."access_granted_at" AS t1_r5, "users"."created_at" AS t1_r6, "users"."updated_at" AS t1_r7 FROM "access_tokens" LEFT OUTER JOIN "users" ON "users"."id" = "access_tokens"."user_id" WHERE "access_tokens"."token" = $1 LIMIT $2[0m  [["token", "xxx"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user7@example.com"], ["auth0_uid", "auth0|t7"], ["created_at", "2020-07-25 11:20:46.593503"], ["updated_at", "2020-07-25 11:20:46.593503"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("user_id", "name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", "391e2b8e-3b62-4c83-859a-884cd22b43d0"], ["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:20:46.595496"], ["updated_at", "2020-07-25 11:20:46.595496"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[34mSELECT "access_tokens"."id" AS t0_r0, "access_tokens"."user_id" AS t0_r1, "access_tokens"."name" AS t0_r2, "access_tokens"."token" AS t0_r3, "access_tokens"."actions" AS t0_r4, "access_tokens"."last_used_at" AS t0_r5, "access_tokens"."expires_at" AS t0_r6, "access_tokens"."invalidated_at" AS t0_r7, "access_tokens"."created_at" AS t0_r8, "access_tokens"."updated_at" AS t0_r9, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."admin_roles" AS t1_r3, "users"."auth0_uid" AS t1_r4, "users"."access_granted_at" AS t1_r5, "users"."created_at" AS t1_r6, "users"."updated_at" AS t1_r7 FROM "access_tokens" LEFT OUTER JOIN "users" ON "users"."id" = "access_tokens"."user_id" WHERE "access_tokens"."token" = $1 LIMIT $2[0m  [["token", "xxx-404"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user8@example.com"], ["auth0_uid", "auth0|t8"], ["created_at", "2020-07-25 11:20:46.598962"], ["updated_at", "2020-07-25 11:20:46.598962"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("user_id", "name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", "3a1648b5-f2d3-47ad-9297-2b12ad816393"], ["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:20:46.600325"], ["updated_at", "2020-07-25 11:20:46.600325"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[34mSELECT "access_tokens"."id" AS t0_r0, "access_tokens"."user_id" AS t0_r1, "access_tokens"."name" AS t0_r2, "access_tokens"."token" AS t0_r3, "access_tokens"."actions" AS t0_r4, "access_tokens"."last_used_at" AS t0_r5, "access_tokens"."expires_at" AS t0_r6, "access_tokens"."invalidated_at" AS t0_r7, "access_tokens"."created_at" AS t0_r8, "access_tokens"."updated_at" AS t0_r9, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."admin_roles" AS t1_r3, "users"."auth0_uid" AS t1_r4, "users"."access_granted_at" AS t1_r5, "users"."created_at" AS t1_r6, "users"."updated_at" AS t1_r7 FROM "access_tokens" LEFT OUTER JOIN "users" ON "users"."id" = "access_tokens"."user_id" WHERE "access_tokens"."token" = $1 LIMIT $2[0m  [["token", "xxx"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (4.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user1@example.com"], ["auth0_uid", "auth0|t1"], ["created_at", "2020-07-25 11:21:51.878514"], ["updated_at", "2020-07-25 11:21:51.878514"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.3ms)[0m  [1m[32mINSERT INTO "access_tokens" ("user_id", "name", "token", "invalidated_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", "a083dffd-f917-4d61-bdda-63e7c49ebe0e"], ["name", "Test Token"], ["token", "xxx"], ["invalidated_at", "2020-07-25 11:20:51.858752"], ["created_at", "2020-07-25 11:21:51.896814"], ["updated_at", "2020-07-25 11:21:51.896814"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[34mSELECT "access_tokens"."id" AS t0_r0, "access_tokens"."user_id" AS t0_r1, "access_tokens"."name" AS t0_r2, "access_tokens"."token" AS t0_r3, "access_tokens"."actions" AS t0_r4, "access_tokens"."last_used_at" AS t0_r5, "access_tokens"."expires_at" AS t0_r6, "access_tokens"."invalidated_at" AS t0_r7, "access_tokens"."created_at" AS t0_r8, "access_tokens"."updated_at" AS t0_r9, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."admin_roles" AS t1_r3, "users"."auth0_uid" AS t1_r4, "users"."access_granted_at" AS t1_r5, "users"."created_at" AS t1_r6, "users"."updated_at" AS t1_r7 FROM "access_tokens" LEFT OUTER JOIN "users" ON "users"."id" = "access_tokens"."user_id" WHERE "access_tokens"."token" = $1 LIMIT $2[0m  [["token", "xxx"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user2@example.com"], ["auth0_uid", "auth0|t2"], ["created_at", "2020-07-25 11:21:51.910090"], ["updated_at", "2020-07-25 11:21:51.910090"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("user_id", "name", "token", "expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", "69579dc7-5ce3-4996-b703-a047685f8252"], ["name", "Test Token"], ["token", "xxx"], ["expires_at", "2020-07-25 11:20:51.909622"], ["created_at", "2020-07-25 11:21:51.911292"], ["updated_at", "2020-07-25 11:21:51.911292"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[34mSELECT "access_tokens"."id" AS t0_r0, "access_tokens"."user_id" AS t0_r1, "access_tokens"."name" AS t0_r2, "access_tokens"."token" AS t0_r3, "access_tokens"."actions" AS t0_r4, "access_tokens"."last_used_at" AS t0_r5, "access_tokens"."expires_at" AS t0_r6, "access_tokens"."invalidated_at" AS t0_r7, "access_tokens"."created_at" AS t0_r8, "access_tokens"."updated_at" AS t0_r9, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."admin_roles" AS t1_r3, "users"."auth0_uid" AS t1_r4, "users"."access_granted_at" AS t1_r5, "users"."created_at" AS t1_r6, "users"."updated_at" AS t1_r7 FROM "access_tokens" LEFT OUTER JOIN "users" ON "users"."id" = "access_tokens"."user_id" WHERE "access_tokens"."token" = $1 LIMIT $2[0m  [["token", "xxx"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user3@example.com"], ["auth0_uid", "auth0|t3"], ["created_at", "2020-07-25 11:21:51.914842"], ["updated_at", "2020-07-25 11:21:51.914842"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("user_id", "name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", "0afe7458-7b41-4e0f-8a86-706b83f40b17"], ["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:21:51.915982"], ["updated_at", "2020-07-25 11:21:51.915982"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[34mSELECT "access_tokens"."id" AS t0_r0, "access_tokens"."user_id" AS t0_r1, "access_tokens"."name" AS t0_r2, "access_tokens"."token" AS t0_r3, "access_tokens"."actions" AS t0_r4, "access_tokens"."last_used_at" AS t0_r5, "access_tokens"."expires_at" AS t0_r6, "access_tokens"."invalidated_at" AS t0_r7, "access_tokens"."created_at" AS t0_r8, "access_tokens"."updated_at" AS t0_r9, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."admin_roles" AS t1_r3, "users"."auth0_uid" AS t1_r4, "users"."access_granted_at" AS t1_r5, "users"."created_at" AS t1_r6, "users"."updated_at" AS t1_r7 FROM "access_tokens" LEFT OUTER JOIN "users" ON "users"."id" = "access_tokens"."user_id" WHERE "access_tokens"."token" = $1 LIMIT $2[0m  [["token", "xxx"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user4@example.com"], ["auth0_uid", "auth0|t4"], ["created_at", "2020-07-25 11:21:51.919212"], ["updated_at", "2020-07-25 11:21:51.919212"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("user_id", "name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", "6dc13125-e5aa-425c-9507-6c3248fbb837"], ["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:21:51.920366"], ["updated_at", "2020-07-25 11:21:51.920366"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[34mSELECT "access_tokens"."id" AS t0_r0, "access_tokens"."user_id" AS t0_r1, "access_tokens"."name" AS t0_r2, "access_tokens"."token" AS t0_r3, "access_tokens"."actions" AS t0_r4, "access_tokens"."last_used_at" AS t0_r5, "access_tokens"."expires_at" AS t0_r6, "access_tokens"."invalidated_at" AS t0_r7, "access_tokens"."created_at" AS t0_r8, "access_tokens"."updated_at" AS t0_r9, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."admin_roles" AS t1_r3, "users"."auth0_uid" AS t1_r4, "users"."access_granted_at" AS t1_r5, "users"."created_at" AS t1_r6, "users"."updated_at" AS t1_r7 FROM "access_tokens" LEFT OUTER JOIN "users" ON "users"."id" = "access_tokens"."user_id" WHERE "access_tokens"."token" = $1 LIMIT $2[0m  [["token", "xxx"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user5@example.com"], ["auth0_uid", "auth0|t5"], ["created_at", "2020-07-25 11:21:51.924669"], ["updated_at", "2020-07-25 11:21:51.924669"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("user_id", "name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", "a1f58379-4d6e-41c0-b92f-2c1d96c3dae0"], ["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:21:51.925968"], ["updated_at", "2020-07-25 11:21:51.925968"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[34mSELECT "access_tokens"."id" AS t0_r0, "access_tokens"."user_id" AS t0_r1, "access_tokens"."name" AS t0_r2, "access_tokens"."token" AS t0_r3, "access_tokens"."actions" AS t0_r4, "access_tokens"."last_used_at" AS t0_r5, "access_tokens"."expires_at" AS t0_r6, "access_tokens"."invalidated_at" AS t0_r7, "access_tokens"."created_at" AS t0_r8, "access_tokens"."updated_at" AS t0_r9, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."admin_roles" AS t1_r3, "users"."auth0_uid" AS t1_r4, "users"."access_granted_at" AS t1_r5, "users"."created_at" AS t1_r6, "users"."updated_at" AS t1_r7 FROM "access_tokens" LEFT OUTER JOIN "users" ON "users"."id" = "access_tokens"."user_id" WHERE "access_tokens"."token" = $1 LIMIT $2[0m  [["token", "xxx"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user6@example.com"], ["auth0_uid", "auth0|t6"], ["created_at", "2020-07-25 11:21:51.930744"], ["updated_at", "2020-07-25 11:21:51.930744"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("user_id", "name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", "766bfa2d-1331-4358-8fb0-91d980f6a066"], ["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:21:51.932291"], ["updated_at", "2020-07-25 11:21:51.932291"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user7@example.com"], ["auth0_uid", "auth0|t7"], ["created_at", "2020-07-25 11:21:51.934640"], ["updated_at", "2020-07-25 11:21:51.934640"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("user_id", "name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", "2a870e11-76d3-42ff-9658-c1a9087e6e64"], ["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:21:51.935973"], ["updated_at", "2020-07-25 11:21:51.935973"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[34mSELECT "access_tokens"."id" AS t0_r0, "access_tokens"."user_id" AS t0_r1, "access_tokens"."name" AS t0_r2, "access_tokens"."token" AS t0_r3, "access_tokens"."actions" AS t0_r4, "access_tokens"."last_used_at" AS t0_r5, "access_tokens"."expires_at" AS t0_r6, "access_tokens"."invalidated_at" AS t0_r7, "access_tokens"."created_at" AS t0_r8, "access_tokens"."updated_at" AS t0_r9, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."admin_roles" AS t1_r3, "users"."auth0_uid" AS t1_r4, "users"."access_granted_at" AS t1_r5, "users"."created_at" AS t1_r6, "users"."updated_at" AS t1_r7 FROM "access_tokens" LEFT OUTER JOIN "users" ON "users"."id" = "access_tokens"."user_id" WHERE "access_tokens"."token" = $1 LIMIT $2[0m  [["token", "xxx-404"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user8@example.com"], ["auth0_uid", "auth0|t8"], ["created_at", "2020-07-25 11:21:51.939585"], ["updated_at", "2020-07-25 11:21:51.939585"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("user_id", "name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", "51b36959-5e2c-4fac-af44-aa13b821cd86"], ["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:21:51.940902"], ["updated_at", "2020-07-25 11:21:51.940902"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[34mSELECT "access_tokens"."id" AS t0_r0, "access_tokens"."user_id" AS t0_r1, "access_tokens"."name" AS t0_r2, "access_tokens"."token" AS t0_r3, "access_tokens"."actions" AS t0_r4, "access_tokens"."last_used_at" AS t0_r5, "access_tokens"."expires_at" AS t0_r6, "access_tokens"."invalidated_at" AS t0_r7, "access_tokens"."created_at" AS t0_r8, "access_tokens"."updated_at" AS t0_r9, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."admin_roles" AS t1_r3, "users"."auth0_uid" AS t1_r4, "users"."access_granted_at" AS t1_r5, "users"."created_at" AS t1_r6, "users"."updated_at" AS t1_r7 FROM "access_tokens" LEFT OUTER JOIN "users" ON "users"."id" = "access_tokens"."user_id" WHERE "access_tokens"."token" = $1 LIMIT $2[0m  [["token", "xxx"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (4.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user1@example.com"], ["auth0_uid", "auth0|t1"], ["created_at", "2020-07-25 11:24:13.649593"], ["updated_at", "2020-07-25 11:24:13.649593"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.3ms)[0m  [1m[32mINSERT INTO "access_tokens" ("user_id", "name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", "4fa6c561-ae53-46fb-8df0-851605d139b7"], ["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:24:13.678266"], ["updated_at", "2020-07-25 11:24:13.678266"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[34mSELECT "access_tokens"."id" AS t0_r0, "access_tokens"."user_id" AS t0_r1, "access_tokens"."name" AS t0_r2, "access_tokens"."token" AS t0_r3, "access_tokens"."actions" AS t0_r4, "access_tokens"."last_used_at" AS t0_r5, "access_tokens"."expires_at" AS t0_r6, "access_tokens"."invalidated_at" AS t0_r7, "access_tokens"."created_at" AS t0_r8, "access_tokens"."updated_at" AS t0_r9, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."admin_roles" AS t1_r3, "users"."auth0_uid" AS t1_r4, "users"."access_granted_at" AS t1_r5, "users"."created_at" AS t1_r6, "users"."updated_at" AS t1_r7 FROM "access_tokens" LEFT OUTER JOIN "users" ON "users"."id" = "access_tokens"."user_id" WHERE "access_tokens"."token" = $1 LIMIT $2[0m  [["token", "xxx-404"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user2@example.com"], ["auth0_uid", "auth0|t2"], ["created_at", "2020-07-25 11:24:13.691173"], ["updated_at", "2020-07-25 11:24:13.691173"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("user_id", "name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", "4aa2ab64-7ea8-427a-bb9a-8f03a3d2230d"], ["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:24:13.692569"], ["updated_at", "2020-07-25 11:24:13.692569"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[34mSELECT "access_tokens"."id" AS t0_r0, "access_tokens"."user_id" AS t0_r1, "access_tokens"."name" AS t0_r2, "access_tokens"."token" AS t0_r3, "access_tokens"."actions" AS t0_r4, "access_tokens"."last_used_at" AS t0_r5, "access_tokens"."expires_at" AS t0_r6, "access_tokens"."invalidated_at" AS t0_r7, "access_tokens"."created_at" AS t0_r8, "access_tokens"."updated_at" AS t0_r9, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."admin_roles" AS t1_r3, "users"."auth0_uid" AS t1_r4, "users"."access_granted_at" AS t1_r5, "users"."created_at" AS t1_r6, "users"."updated_at" AS t1_r7 FROM "access_tokens" LEFT OUTER JOIN "users" ON "users"."id" = "access_tokens"."user_id" WHERE "access_tokens"."token" = $1 LIMIT $2[0m  [["token", "xxx"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user3@example.com"], ["auth0_uid", "auth0|t3"], ["created_at", "2020-07-25 11:24:13.697388"], ["updated_at", "2020-07-25 11:24:13.697388"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("user_id", "name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", "9aff3716-23c0-4c18-ab00-907aac743eaf"], ["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:24:13.698905"], ["updated_at", "2020-07-25 11:24:13.698905"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user4@example.com"], ["auth0_uid", "auth0|t4"], ["created_at", "2020-07-25 11:24:13.701070"], ["updated_at", "2020-07-25 11:24:13.701070"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("user_id", "name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", "2a903173-4a2a-4514-bae7-24de011a2b1f"], ["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:24:13.702397"], ["updated_at", "2020-07-25 11:24:13.702397"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[34mSELECT "access_tokens"."id" AS t0_r0, "access_tokens"."user_id" AS t0_r1, "access_tokens"."name" AS t0_r2, "access_tokens"."token" AS t0_r3, "access_tokens"."actions" AS t0_r4, "access_tokens"."last_used_at" AS t0_r5, "access_tokens"."expires_at" AS t0_r6, "access_tokens"."invalidated_at" AS t0_r7, "access_tokens"."created_at" AS t0_r8, "access_tokens"."updated_at" AS t0_r9, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."admin_roles" AS t1_r3, "users"."auth0_uid" AS t1_r4, "users"."access_granted_at" AS t1_r5, "users"."created_at" AS t1_r6, "users"."updated_at" AS t1_r7 FROM "access_tokens" LEFT OUTER JOIN "users" ON "users"."id" = "access_tokens"."user_id" WHERE "access_tokens"."token" = $1 LIMIT $2[0m  [["token", "xxx"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user5@example.com"], ["auth0_uid", "auth0|t5"], ["created_at", "2020-07-25 11:24:13.708121"], ["updated_at", "2020-07-25 11:24:13.708121"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("user_id", "name", "token", "expires_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", "26e75162-afbe-42b8-a3f2-9656b72e1655"], ["name", "Test Token"], ["token", "xxx"], ["expires_at", "2020-07-25 11:23:13.707504"], ["created_at", "2020-07-25 11:24:13.709971"], ["updated_at", "2020-07-25 11:24:13.709971"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[34mSELECT "access_tokens"."id" AS t0_r0, "access_tokens"."user_id" AS t0_r1, "access_tokens"."name" AS t0_r2, "access_tokens"."token" AS t0_r3, "access_tokens"."actions" AS t0_r4, "access_tokens"."last_used_at" AS t0_r5, "access_tokens"."expires_at" AS t0_r6, "access_tokens"."invalidated_at" AS t0_r7, "access_tokens"."created_at" AS t0_r8, "access_tokens"."updated_at" AS t0_r9, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."admin_roles" AS t1_r3, "users"."auth0_uid" AS t1_r4, "users"."access_granted_at" AS t1_r5, "users"."created_at" AS t1_r6, "users"."updated_at" AS t1_r7 FROM "access_tokens" LEFT OUTER JOIN "users" ON "users"."id" = "access_tokens"."user_id" WHERE "access_tokens"."token" = $1 LIMIT $2[0m  [["token", "xxx"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user6@example.com"], ["auth0_uid", "auth0|t6"], ["created_at", "2020-07-25 11:24:13.714407"], ["updated_at", "2020-07-25 11:24:13.714407"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("user_id", "name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", "54242e85-7620-4c3c-b89a-9f9c07d24e1e"], ["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:24:13.715562"], ["updated_at", "2020-07-25 11:24:13.715562"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[34mSELECT "access_tokens"."id" AS t0_r0, "access_tokens"."user_id" AS t0_r1, "access_tokens"."name" AS t0_r2, "access_tokens"."token" AS t0_r3, "access_tokens"."actions" AS t0_r4, "access_tokens"."last_used_at" AS t0_r5, "access_tokens"."expires_at" AS t0_r6, "access_tokens"."invalidated_at" AS t0_r7, "access_tokens"."created_at" AS t0_r8, "access_tokens"."updated_at" AS t0_r9, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."admin_roles" AS t1_r3, "users"."auth0_uid" AS t1_r4, "users"."access_granted_at" AS t1_r5, "users"."created_at" AS t1_r6, "users"."updated_at" AS t1_r7 FROM "access_tokens" LEFT OUTER JOIN "users" ON "users"."id" = "access_tokens"."user_id" WHERE "access_tokens"."token" = $1 LIMIT $2[0m  [["token", "xxx"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user7@example.com"], ["auth0_uid", "auth0|t7"], ["created_at", "2020-07-25 11:24:13.718954"], ["updated_at", "2020-07-25 11:24:13.718954"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.2ms)[0m  [1m[32mINSERT INTO "access_tokens" ("user_id", "name", "token", "invalidated_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", "a30b0d35-cba7-4c83-8f37-c3ceef6cde4c"], ["name", "Test Token"], ["token", "xxx"], ["invalidated_at", "2020-07-25 11:23:13.718563"], ["created_at", "2020-07-25 11:24:13.720105"], ["updated_at", "2020-07-25 11:24:13.720105"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[34mSELECT "access_tokens"."id" AS t0_r0, "access_tokens"."user_id" AS t0_r1, "access_tokens"."name" AS t0_r2, "access_tokens"."token" AS t0_r3, "access_tokens"."actions" AS t0_r4, "access_tokens"."last_used_at" AS t0_r5, "access_tokens"."expires_at" AS t0_r6, "access_tokens"."invalidated_at" AS t0_r7, "access_tokens"."created_at" AS t0_r8, "access_tokens"."updated_at" AS t0_r9, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."admin_roles" AS t1_r3, "users"."auth0_uid" AS t1_r4, "users"."access_granted_at" AS t1_r5, "users"."created_at" AS t1_r6, "users"."updated_at" AS t1_r7 FROM "access_tokens" LEFT OUTER JOIN "users" ON "users"."id" = "access_tokens"."user_id" WHERE "access_tokens"."token" = $1 LIMIT $2[0m  [["token", "xxx"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::User Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "auth0_uid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user8@example.com"], ["auth0_uid", "auth0|t8"], ["created_at", "2020-07-25 11:24:13.724454"], ["updated_at", "2020-07-25 11:24:13.724454"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRapils::Models::AccessToken Create (0.3ms)[0m  [1m[32mINSERT INTO "access_tokens" ("user_id", "name", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", "5eef1096-ffb5-4b31-b917-d0ba2c133c2f"], ["name", "Test Token"], ["token", "xxx"], ["created_at", "2020-07-25 11:24:13.726070"], ["updated_at", "2020-07-25 11:24:13.726070"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[34mSELECT "access_tokens"."id" AS t0_r0, "access_tokens"."user_id" AS t0_r1, "access_tokens"."name" AS t0_r2, "access_tokens"."token" AS t0_r3, "access_tokens"."actions" AS t0_r4, "access_tokens"."last_used_at" AS t0_r5, "access_tokens"."expires_at" AS t0_r6, "access_tokens"."invalidated_at" AS t0_r7, "access_tokens"."created_at" AS t0_r8, "access_tokens"."updated_at" AS t0_r9, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."email" AS t1_r2, "users"."admin_roles" AS t1_r3, "users"."auth0_uid" AS t1_r4, "users"."access_granted_at" AS t1_r5, "users"."created_at" AS t1_r6, "users"."updated_at" AS t1_r7 FROM "access_tokens" LEFT OUTER JOIN "users" ON "users"."id" = "access_tokens"."user_id" WHERE "access_tokens"."token" = $1 LIMIT $2[0m  [["token", "xxx"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
