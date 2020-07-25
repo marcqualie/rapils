@@ -3,7 +3,7 @@ module Rapils
     class User < BaseRecord
       self.table_name = 'users'
 
-      has_many :access_tokens
+      has_many :access_tokens, class_name: '::AccessToken'
     end
   end
 end

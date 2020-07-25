@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :access_token, class: 'Rapils::Models::AccessToken' do
+  factory :access_token do
     name { 'Test Token' }
 
     association :user

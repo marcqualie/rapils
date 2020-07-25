@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :user, class: 'Rapils::Models::User' do
+  factory :user do
     sequence(:email) { |n| "user#{n}@example.com" }
     sequence(:auth0_uid) { |n| "auth0|t#{n}" }
     # password { 'password' }

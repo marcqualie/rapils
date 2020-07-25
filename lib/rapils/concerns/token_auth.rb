@@ -13,7 +13,7 @@ module Rapils
           token = session[:access_token] || request.headers['Authorization']&.gsub(/bearer\s*/i, '')
           return unless token
 
-          access_token ||= Rapils::Models::AccessToken.eager_load(:user).find_by(token: token)
+          access_token ||= ::AccessToken.eager_load(:user).find_by(token: token)
           return if access_token.nil? || access_token.expired? || access_token.invalidated?
 
           access_token

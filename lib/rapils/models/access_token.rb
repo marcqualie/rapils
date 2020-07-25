@@ -3,7 +3,7 @@ module Rapils
     class AccessToken < BaseRecord
       self.table_name = 'access_tokens'
 
-      belongs_to :user, class_name: 'Rapils::Models::User'
+      belongs_to :user, class_name: '::User'
 
       before_validation :generate_token
 
