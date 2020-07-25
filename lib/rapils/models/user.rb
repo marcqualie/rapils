@@ -18,6 +18,14 @@ module Rapils
         self.access_granted_at ||= DateTime.now
         save! if changed?
       end
+
+      def avatar_url
+        "https://www.gravatar.com/avatar/#{gravatar_hash}?s=160&d=identicon"
+      end
+
+      def gravatar_hash
+        Digest::MD5.hexdigest email.strip.downcase
+      end
     end
   end
 end
