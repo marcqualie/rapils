@@ -5,6 +5,7 @@ jobs:
     docker:
       - image: circleci/ruby:2.6.6
         environment:
+          RAILS_ENV: test
           DATABASE_URL: postgres://circleci:circleci@localhost/rapils_test
       - image: circleci/postgres:11.6-alpine
         environment:
@@ -23,7 +24,7 @@ jobs:
           paths:
             - vendor/bundle
       - run: dockerize -wait tcp://localhost:5432 -timeout 1m
-      - run: bundle exec rake db:create db:schema:load
+      - run: bundle exec rake db:schema:load
       # - run:
       #     name: Setup Code Climate test-reporter
       #     command: |
