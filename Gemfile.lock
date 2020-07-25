@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rapils (0.1.0)
+    rapils (0.1.0.pre.alpha1)
       diffcrypt (~> 0.3)
       fast_jsonapi (~> 1.5)
       pg (>= 0.18, < 2.0)
@@ -198,10 +198,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  factory_bot_rails
-  pg
+  factory_bot_rails (~> 6.1.0)
   rapils!
-  rspec-rails
+  rspec-rails (~> 4.0.1)
   rubocop (~> 0.88)
   simplecov (~> 0.17.0)
   simplecov-lcov (< 0.8)
