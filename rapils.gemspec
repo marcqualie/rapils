@@ -27,6 +27,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'diffcrypt', '~> 0.3'
   spec.add_dependency 'fast_jsonapi', '~> 1.5'
+  spec.add_dependency 'pg', '>= 0.18', '< 2.0'
   spec.add_dependency 'pundit', '~> 2.1'
   spec.add_dependency 'rails', '~> 6.0.3', '>= 6.0.3.1'
 

@@ -14,6 +14,7 @@ module Rapils
   class Engine < Rails::Engine
     isolate_namespace Rapils
 
+    # Generators for use within the engine itself, not the consuming rails app
     config.generators do |g|
       g.orm :active_record, primary_key_type: :uuid
 
