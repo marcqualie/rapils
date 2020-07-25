@@ -13,8 +13,15 @@ jobs:
           POSTGRES_PASSWORD: circleci
     steps:
       - checkout
+      - restore_cache:
+          keys:
+            - bundler-{{ checksum "Gemfile.lock" }}-{{ .Environment.CACHE_VERSION }}
       - run: gem install bundler:2.1.4
-      - run: bundle install
+      - run: bundle install --path=vendor/bundle --jobs=4 --retry=3
+      - save_cache:
+          key: bundler-{{ checksum "Gemfile.lock" }}-{{ .Environment.CACHE_VERSION }}
+          paths:
+            - vendor/bundle
       - run: dockerize -wait tcp://localhost:5432 -timeout 1m
       - run: bundle exec rake db:create db:schema:load
       # - run:
