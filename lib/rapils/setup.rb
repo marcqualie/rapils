@@ -16,12 +16,14 @@ module Rapils
 
   def self.setup(dependencies = DEFAULT_DEPENDENCIES)
     # Require core libraries that would usually be in app Gemfile
-    require 'diffcrypt'
     require 'pg'
 
     # Load core rails dependencies
     require 'rails'
     dependencies.each { |dependency| require dependency }
+
+    # Diffcrypt must be included after rails, since it now uses railties
+    require 'diffcrypt'
 
     # Require the gems listed in Gemfile, including any gems
     # you've limited to :test, :development, or :production.
