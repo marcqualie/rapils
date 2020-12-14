@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rapils (0.1.0.pre.alpha1)
+    rapils (0.1.0.pre.alpha2)
       diffcrypt (~> 0.5)
       fast_jsonapi (~> 1.5)
       pg (>= 0.18, < 2.0)
